@@ -55,7 +55,7 @@ namespace Data
 
 		public void SetSettingsValue(int sliderIndex)
 		{
-			settings[sliderIndex] = sliders[sliderIndex].value;[]
+			settings[sliderIndex] = sliders[sliderIndex].value;
 		}
 	}
 }
