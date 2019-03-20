@@ -8,19 +8,31 @@ namespace Cam
         [SerializeField] private Transform targetTransform;
         [SerializeField] private Vector3 offset;
         [SerializeField, Range(0, 1)] private float speed;
+        [SerializeField] private float zoomSpeed;
+        [SerializeField] private Vector2 zoomBounds;
+        private float _zoomOffset;
 
-        private void Update()
+        private void FixedUpdate()
         {
             UpdatePosition();
+            // Zooming.
+            var mouseScroll = Input.GetAxis("Mouse ScrollWheel");
+            Zoom(mouseScroll);
         }
 
         private void UpdatePosition()
         {
-            var offsetX = transform.right * offset.x;
-            var offsetY = transform.up * offset.y;
-            var offsetZ = transform.forward * offset.z;
+            var tf = transform;
+            var offsetX = tf.right * offset.x;
+            var offsetY = tf.up * offset.y;
+            var offsetZ = tf.forward * (offset.z + _zoomOffset);
             var targetPosition = targetTransform.position + offsetX + offsetY + offsetZ;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, speed);
+            tf.position = Vector3.Lerp(tf.position, targetPosition, speed);
+        }
+        
+        private void Zoom (float input)
+        {
+            _zoomOffset = Mathf.Clamp(_zoomOffset + input * zoomSpeed, zoomBounds.x, zoomBounds.y);
         }
     }
 }
