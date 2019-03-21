@@ -20,17 +20,20 @@ namespace Player
 			var h = Input.GetAxis("Horizontal");
 			var v = Input.GetAxis("Vertical");
 			alignTransform.enabled = false;
-			MovePlayer(new Vector2(h, v));
+			if (Mathf.Abs(h) + Mathf.Abs(v) > 0)
+			{
+				MovePlayer(new Vector2(h, v));
+			}
 		}
 
 		private void MovePlayer(Vector2 input)
 		{
 			if (input != Vector2.zero) alignTransform.enabled = true;
-			var transform1 = transform;
-			var movementX = transform1.right * input.x;
-			var movementZ = transform1.forward * input.y;
+			var tf = transform;
+			var movementX = tf.right * input.x;
+			var movementZ = tf.forward * input.y;
 			var movementVector = (movementX + movementZ) * movementSpeed;
-			_rb.MovePosition(transform1.position + movementVector);
+			_rb.MovePosition(tf.position + movementVector);
 		}
 	}
 }
