@@ -6,9 +6,15 @@ namespace UI {
 	{
 		[SerializeField] private float textSpeed;
 		[SerializeField] private GameObject speakerPrefab;
-		private Text targetText;
-		private float timeSinceText;
-		private string textToSay;
+		private Image _box;
+		private Text _targetText;
+		private float _timeSinceText;
+		private string _textToSay;
+
+		private void Awake()
+		{
+			_box = GetComponent<Image>();
+		}
 
 		public void Say(string speaker, string message)
 		{
@@ -19,9 +25,9 @@ namespace UI {
 			// Set the speaker.
 			childTextObjects[0].text = $"{speaker}:";
 			// Set the target.
-			targetText = childTextObjects[1];
+			_targetText = childTextObjects[1];
 			// Set the text.
-			textToSay = message;
+			_textToSay = message;
 		}
 
 		private void Start()
@@ -31,13 +37,16 @@ namespace UI {
 
 		private void Update()
 		{
-			timeSinceText = Mathf.Clamp(timeSinceText + Time.deltaTime, 0, textSpeed);
+			_timeSinceText = Mathf.Clamp(_timeSinceText + Time.deltaTime, 0, textSpeed);
+
+			// Enable the box if there is text to display.
+			_box.enabled = transform.childCount > 0; 
 			
-			if (timeSinceText >= textSpeed && textToSay.Length > 0)
+			if (_timeSinceText >= textSpeed && _textToSay.Length > 0)
 			{
-				timeSinceText = 0;
-				targetText.text += textToSay[0];
-				textToSay = textToSay.Substring(1);
+				_timeSinceText = 0;
+				_targetText.text += _textToSay[0];
+				_textToSay = _textToSay.Substring(1);
 			}
 		}
 	}
