@@ -1,11 +1,14 @@
-﻿using UnityEngine;
+﻿using Conversation;
+using UnityEngine;
+using UnityEngine.UI;
 
-namespace Conversation {
+namespace UI {
 	public class ConversationManager : MonoBehaviour
 	{
 		[SerializeField] private ConversationObject targetConversation;
 		[SerializeField] private GameObject conversationContainer;
 		[SerializeField] private int elementIndex;
+		private string _textToReadOut;
 
 		private void Awake()
 		{
@@ -36,6 +39,15 @@ namespace Conversation {
 		private void DisplayElement()
 		{
 			targetConversation.GetElement(elementIndex).Display(conversationContainer.transform);
+		}
+
+		public void ReadOut(string textToReadOut, Text targetText)
+		{
+			_textToReadOut = textToReadOut;
+		}
+
+		private void Update()
+		{
 		}
 	}
 }

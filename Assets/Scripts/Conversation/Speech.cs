@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Conversation {
@@ -6,6 +7,7 @@ namespace Conversation {
 	public class Speech : ConversationElement
 	{
 		[SerializeField] private string speaker;
+		[SerializeField] private ConversationManager conversationManager;
 		[SerializeField, TextArea(3, 10)] private string speech;
 
 		public override GameObject Display(Transform parent)
@@ -15,6 +17,8 @@ namespace Conversation {
 			// Set the speaker.
 			prefab.GetComponentsInChildren<Text>()[0].text = $"{speaker}:";
 			return prefab;
+			// Set the text.
+			
 		}
 	}
 }
