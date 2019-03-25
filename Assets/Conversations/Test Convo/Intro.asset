@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05cbee9167af2874daf84d93abbfa400, type: 3}
-  m_Name: Options
+  m_Script: {fileID: 11500000, guid: e6fe3fcfef4ff7a4eb5611dc0727b6eb, type: 3}
+  m_Name: Intro
   m_EditorClassIdentifier: 
-  options: []
+  prefab: {fileID: 8259542683917057622, guid: 54481891b046ce14cb80d6323007f441, type: 3}
+  speaker: God
+  speech: Hello there person

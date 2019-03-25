@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fe3fcfef4ff7a4eb5611dc0727b6eb, type: 3}
-  m_Name: Speech
+  m_Name: Dud
   m_EditorClassIdentifier: 
-  speaker: Curtis
-  speech: Hey there
+  prefab: {fileID: 8259542683917057622, guid: 54481891b046ce14cb80d6323007f441, type: 3}
+  speaker: Base Speaker
+  speech: Base Speech

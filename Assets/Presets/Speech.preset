@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Speech
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: e6fe3fcfef4ff7a4eb5611dc0727b6eb,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: prefab
+    value: 
+    objectReference: {fileID: 8259542683917057622, guid: 54481891b046ce14cb80d6323007f441,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: speaker
+    value: Base Speaker
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: speech
+    value: Base Speech
+    objectReference: {fileID: 0}
