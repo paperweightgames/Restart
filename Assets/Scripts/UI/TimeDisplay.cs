@@ -14,7 +14,7 @@ namespace UI
 		{
 			// Day.
 			var formattedDay = Mathf.Ceil(timeCycle.GetTime() / timeCycle.GetDayLength());
-			dayText.text = string.Format("Day {0}", formattedDay);
+			dayText.text = $"Day: {formattedDay}";
 			// Time.
 			var currentTime = timeCycle.GetTime() % timeCycle.GetDayLength() / timeCycle.GetDayLength() * 24;
 			var currentHour = Mathf.Floor(currentTime);
