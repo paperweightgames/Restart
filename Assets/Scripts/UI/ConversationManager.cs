@@ -8,7 +8,8 @@ namespace UI {
 		[SerializeField] private ConversationObject targetConversation;
 		[SerializeField] private GameObject conversationContainer;
 		[SerializeField] private int elementIndex;
-		private string _textToReadOut;
+		private string _textToReadOut = "";
+		private Text _targetText;
 
 		private void Awake()
 		{
@@ -44,10 +45,17 @@ namespace UI {
 		public void ReadOut(string textToReadOut, Text targetText)
 		{
 			_textToReadOut = textToReadOut;
+			_targetText = targetText;
 		}
 
 		private void Update()
 		{
+			print(_textToReadOut);
+			if (_textToReadOut.Length > 0)
+			{
+				_targetText.text += _textToReadOut[0];
+				_textToReadOut = _textToReadOut.Substring(1, _textToReadOut.Length - 1);
+			}
 		}
 	}
 }

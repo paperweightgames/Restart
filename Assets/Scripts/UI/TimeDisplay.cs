@@ -21,7 +21,7 @@ namespace UI
 			var currentMinute = Mathf.Floor((currentTime - currentHour) * 60);
 			var paddedHour = currentHour.ToString(CultureInfo.InvariantCulture).PadLeft(2, '0');
 			var paddedMinute = currentMinute.ToString(CultureInfo.InvariantCulture).PadLeft(2, '0');
-			timeText.text = string.Format("{0}:{1}", paddedHour, paddedMinute);
+			timeText.text = $"{paddedHour}:{paddedMinute}";
 		}
 	}
 }

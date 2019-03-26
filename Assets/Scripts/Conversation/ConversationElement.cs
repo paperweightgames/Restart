@@ -7,8 +7,8 @@ namespace Conversation {
 
 		public virtual GameObject Display(Transform parent)
 		{
-			prefab = Instantiate(prefab, parent);
-			return prefab;
+			var output = Instantiate(prefab, parent);
+			return output;
 		}
 	}
 }
