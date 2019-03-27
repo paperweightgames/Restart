@@ -50,7 +50,6 @@ namespace UI {
 
 		private void Update()
 		{
-			print(_textToReadOut);
 			if (_textToReadOut.Length > 0)
 			{
 				_targetText.text += _textToReadOut[0];

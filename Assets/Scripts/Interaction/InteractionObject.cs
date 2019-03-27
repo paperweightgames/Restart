@@ -8,5 +8,14 @@ namespace Interaction {
 	{
 		[SerializeField] private string name;
 		[SerializeField] private UnityEvent action;
+
+		public string GetName()
+		{
+			return name;
+		}
+		public void Invoke()
+		{
+			action.Invoke();
+		}
 	}
 }
