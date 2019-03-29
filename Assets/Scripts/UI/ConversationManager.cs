@@ -56,5 +56,10 @@ namespace UI {
 				_textToReadOut = _textToReadOut.Substring(1, _textToReadOut.Length - 1);
 			}
 		}
+
+		private void Progress()
+		{
+			
+		}
 	}
 }

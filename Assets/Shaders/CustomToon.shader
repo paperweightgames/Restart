@@ -27,6 +27,7 @@
         // pass for ambient light and first light source
         
         CGPROGRAM
+        #include "Lighting.cginc"
         #include "AutoLight.cginc"
         #pragma multi_compile_fwdbase
         #pragma vertex vert 
@@ -58,7 +59,7 @@
         
         
         //== UNITY defined ==//
-        uniform float4 _LightColor0;
+        //uniform float4 _LightColor0;
         uniform sampler2D _MainTex;
         uniform float4 _MainTex_ST;
         
@@ -72,9 +73,10 @@
         struct vertexOutput {
             float4 pos : SV_POSITION;
             float3 normalDir : TEXCOORD1;
-            float4 lightDir : TEXCOORD2;
+            float4 lightDir : TEXCOORD4;
             float3 viewDir : TEXCOORD3;
             float2 uv : TEXCOORD0;
+            SHADOW_COORDS(2)
         };
         
         vertexOutput vert(vertexInput input){
@@ -106,13 +108,13 @@
         
         float4 frag(vertexOutput input) : COLOR {
             float nDotL = saturate(dot(input.normalDir, input.lightDir.xyz)); 
-            float shadow = SHADOW_ATTENUATION(i);
+            float shadow = SHADOW_ATTENUATION(input);
             
             //Diffuse threshold calculation
-            float diffuseCutoff = saturate( ( max(_Diffuse, nDotL) - _Diffuse ) * (1-_FadeDiffuse) *60 );
+            float diffuseCutoff = saturate( ( max(_Diffuse, nDotL) - _Diffuse ) * (1-_FadeDiffuse) *60 ) * shadow;
             
             //Specular threshold calculation
-            float specularCutoff = saturate( max(_Specular, dot(reflect(-input.lightDir.xyz, input.normalDir), input.viewDir))-_Specular ) * (1-_FadeSpecular) * 100;
+            float specularCutoff = saturate( max(_Specular, dot(reflect(-input.lightDir.xyz, input.normalDir), input.viewDir))-_Specular ) * (1-_FadeSpecular) * 100 * shadow;
             
             //Calculate Outlines
             float outlineStrength = saturate( (dot(input.normalDir, input.viewDir ) - _Outline) * (1-_FadeShadow) * 200 );

@@ -28,6 +28,7 @@ public class TimeCycle : MonoBehaviour
 	{
 		// Increase the current time.
 		currentTime += Time.deltaTime;
+		print(currentTime % dayLength);
 		// Work out the new angle for the directional light.
 		var newAngle = new Vector3(currentTime % dayLength / dayLength * 360 + _originalAngle.x,
 			_originalAngle.y,

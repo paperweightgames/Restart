@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   prefab: {fileID: 8259542683917057622, guid: 54481891b046ce14cb80d6323007f441, type: 3}
-  speaker: God
-  speech: Hello there person
+  speaker: Stranger
+  speech: Hey, here's some change to help you out!

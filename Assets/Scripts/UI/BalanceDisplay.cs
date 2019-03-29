@@ -16,7 +16,7 @@ namespace UI {
 
 		private void Update()
 		{
-			_text.text = $"Balance: {playerBalance.GetBalance():c2}";
+			_text.text = $"Balance: {playerBalance.GetBalance()/100f:c2}";
 		}
 	}
 }
