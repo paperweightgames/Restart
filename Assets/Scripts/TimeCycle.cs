@@ -28,11 +28,14 @@ public class TimeCycle : MonoBehaviour
 	{
 		// Increase the current time.
 		currentTime += Time.deltaTime;
-		print(currentTime % dayLength);
+		var dayProgress = currentTime % dayLength / dayLength;
+		// Toggle the directional light based on the progress.
+		_sun.enabled = dayProgress > .25f && dayProgress < .75f;
+		var smoothX = Mathf.Lerp(_sun.transform.eulerAngles.x, dayProgress * 360, 0.1f);
 		// Work out the new angle for the directional light.
-		var newAngle = new Vector3(currentTime % dayLength / dayLength * 360 + _originalAngle.x,
+		var targetRotation = new Vector3( smoothX+ _originalAngle.x,
 			_originalAngle.y,
 			_originalAngle.z);
-		_sun.transform.eulerAngles = newAngle;
+		_sun.transform.eulerAngles = targetRotation;
 	}
 }

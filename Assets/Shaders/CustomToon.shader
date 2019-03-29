@@ -9,7 +9,7 @@
 		
 		_DiffuseColor ("Diffuse colour", Color) = (0.5,0.5,0.5,1) 
 		_Diffuse ("	Diffuse size", Range(-1.1,1)) = 0.1
-		_FadeDiffuse ("	Diffuse blur", Range(-3, 1)) = 0
+		_FadeDiffuse ("	Diffuse blur", float) = 0
 		
 		_ShadowColor ("Shadow colour", Color) = (0.25,0.25,0.25,1)
 		_FadeShadow ("	Shadow blur", Range(0,1)) = 0
@@ -111,7 +111,7 @@
             float shadow = SHADOW_ATTENUATION(input);
             
             //Diffuse threshold calculation
-            float diffuseCutoff = saturate( ( max(_Diffuse, nDotL) - _Diffuse ) * (1-_FadeDiffuse) *60 ) * shadow;
+            float diffuseCutoff = saturate( ( max(_Diffuse, nDotL) - _Diffuse ) * shadow* (1-_FadeDiffuse) *60 );
             
             //Specular threshold calculation
             float specularCutoff = saturate( max(_Specular, dot(reflect(-input.lightDir.xyz, input.normalDir), input.viewDir))-_Specular ) * (1-_FadeSpecular) * 100 * shadow;
