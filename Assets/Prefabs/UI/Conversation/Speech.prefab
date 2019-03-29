@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8259542683917057617}
   - component: {fileID: 8259542683917057616}
   m_Layer: 5
-  m_Name: Speaker Dialogue
+  m_Name: Speech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
       propertyPath: m_Text
-      value: 'SPEAKER:'
+      value: 'Speakers:'
       objectReference: {fileID: 0}
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
