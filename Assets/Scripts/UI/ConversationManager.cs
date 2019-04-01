@@ -8,58 +8,38 @@ namespace UI {
 		[SerializeField] private ConversationObject targetConversation;
 		[SerializeField] private GameObject conversationContainer;
 		[SerializeField] private int elementIndex;
-		private string _textToReadOut = "";
+		private string _textToRead = "";
 		private Text _targetText;
-
-		private void Awake()
-		{
-			// Clear the conversation at the start of the game.
-			End();
-		}
 
 		public void StartConversation(ConversationObject conversation)
 		{
 			targetConversation = conversation;
-			elementIndex = 0;
 			conversationContainer.SetActive(true);
-			DisplayElement();
+			elementIndex = 0;
 		}
-
-		public void End()
+		
+		public void EndConversation()
 		{
-			targetConversation = null;
 			conversationContainer.SetActive(false);
+			targetConversation = null;
 		}
 
-		public void Next()
+		public void ReadOut(string textToRead, Text textContainer)
 		{
-			elementIndex++;
-			DisplayElement();
+			_textToRead = textToRead;
+			_targetText = textContainer;
 		}
-
-		private void DisplayElement()
-		{
-			targetConversation.GetElement(elementIndex).Display(conversationContainer.transform);
-		}
-
-		public void ReadOut(string textToReadOut, Text targetText)
-		{
-			_textToReadOut = textToReadOut;
-			_targetText = targetText;
-		}
-
+		
 		private void Update()
 		{
-			if (_textToReadOut.Length > 0)
+			// Read out the text if there is any.
+			if (_textToRead.Length > 0)
 			{
-				_targetText.text += _textToReadOut[0];
-				_textToReadOut = _textToReadOut.Substring(1, _textToReadOut.Length - 1);
+				// Append the first character of the text to read out to the text display.
+				_targetText.text += _textToRead[0];
+				// Remove the first character.
+				_textToRead = _textToRead.Substring(1, _textToRead.Length - 1);
 			}
-		}
-
-		private void Progress()
-		{
-			
 		}
 	}
 }

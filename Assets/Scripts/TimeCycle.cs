@@ -30,10 +30,9 @@ public class TimeCycle : MonoBehaviour
 		currentTime += Time.deltaTime;
 		var dayProgress = currentTime % dayLength / dayLength;
 		// Toggle the directional light based on the progress.
-		_sun.enabled = dayProgress > .25f && dayProgress < .75f;
-		var smoothX = Mathf.Lerp(_sun.transform.eulerAngles.x, dayProgress * 360, 0.1f);
+		_sun.enabled = dayProgress > .2f && dayProgress < .8f;
 		// Work out the new angle for the directional light.
-		var targetRotation = new Vector3( smoothX+ _originalAngle.x,
+		var targetRotation = new Vector3(dayProgress * 360 + _originalAngle.x,
 			_originalAngle.y,
 			_originalAngle.z);
 		_sun.transform.eulerAngles = targetRotation;

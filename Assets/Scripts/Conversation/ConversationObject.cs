@@ -6,9 +6,9 @@ namespace Conversation {
 	{
 		[SerializeField] private ConversationElement[] conversationElements;
 
-		public ConversationElement GetElement(int index)
+		public ConversationElement[] GetElements()
 		{
-			return conversationElements[index];
+			return conversationElements;
 		}
 	}
 }
