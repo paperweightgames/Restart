@@ -11,6 +11,11 @@ namespace UI {
 		private string _textToRead = "";
 		private Text _targetText;
 
+		private void Start()
+		{
+			EndConversation();
+		}
+
 		public void StartConversation(ConversationObject conversation)
 		{
 			targetConversation = conversation;
@@ -22,6 +27,7 @@ namespace UI {
 		{
 			conversationContainer.SetActive(false);
 			targetConversation = null;
+			elementIndex = 0;
 		}
 
 		public void ReadOut(string textToRead, Text textContainer)

@@ -156,9 +156,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -352,7 +352,7 @@ PrefabInstance:
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
       propertyPath: m_Text
-      value: 'Hunger: 100%'
+      value: Hunger
       objectReference: {fileID: 0}
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
@@ -1169,6 +1169,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277066086745017630, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1273,11 +1278,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
-        type: 3}
-      propertyPath: m_Value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7277066086398241723, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 588068353}
   - component: {fileID: 588068354}
   m_Layer: 5
-  m_Name: Time Container
+  m_Name: Time Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1929,6 +1929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277066086745017630, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2033,11 +2038,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
-        type: 3}
-      propertyPath: m_Value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7277066086398241723, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
@@ -2320,6 +2320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277066086745017630, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2424,11 +2429,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
-        type: 3}
-      propertyPath: m_Value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7277066086398241723, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
@@ -2912,6 +2912,7 @@ MonoBehaviour:
   hungerRate: 0.1
   damageRate: 0.1
   playerHealth: {fileID: 1212395055}
+  timeCycle: {fileID: 0}
 --- !u!4 &1212395057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7738383862695397889, guid: c0059c55a8031bd47b3a8fc56998fad0,
@@ -3142,6 +3143,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1327506958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
+    type: 3}
+  m_PrefabInstance: {fileID: 941108677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1439553826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3824,6 +3837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: 
+  actionKeyColour: {r: 0.8941177, g: 0.5803922, b: 0.227451, a: 1}
   textComponent: {fileID: 1580312276}
   interactObject: {fileID: 25049290}
 --- !u!1 &1604286346
@@ -3956,7 +3970,7 @@ PrefabInstance:
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
       propertyPath: m_Text
-      value: 'Energy: 100%'
+      value: Energy
       objectReference: {fileID: 0}
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
@@ -4591,7 +4605,7 @@ GameObject:
   - component: {fileID: 1876445331}
   - component: {fileID: 1876445330}
   m_Layer: 5
-  m_Name: Meter Container
+  m_Name: Stat Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4657,6 +4671,26 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!1 &1901997173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7215619907991351533, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
+    type: 3}
+  m_PrefabInstance: {fileID: 214529653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1901997174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901997173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec013b5798c933418fe1662668868e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerScript: {fileID: 1212395056}
+  hungerSlider: {fileID: 1327506958}
 --- !u!1001 &1930394160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5413,7 +5447,7 @@ PrefabInstance:
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
       propertyPath: m_Text
-      value: 'Thirst: 100%'
+      value: Thirst
       objectReference: {fileID: 0}
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
@@ -5539,6 +5573,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider
       objectReference: {fileID: 0}
+    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277066086745017630, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5643,11 +5682,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277066086745017624, guid: 184fc1f41854c194596148addc6eb224,
-        type: 3}
-      propertyPath: m_Value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7277066086398241723, guid: 184fc1f41854c194596148addc6eb224,
         type: 3}

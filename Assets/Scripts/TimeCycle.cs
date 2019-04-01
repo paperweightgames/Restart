@@ -20,6 +20,7 @@ public class TimeCycle : MonoBehaviour
 
 	private void Awake()
 	{
+		// Gets the reference to the Light component at the start of the game.
 		_sun = GetComponent<Light>();
 		_originalAngle = _sun.transform.eulerAngles;
 	}
@@ -29,8 +30,10 @@ public class TimeCycle : MonoBehaviour
 		// Increase the current time.
 		currentTime += Time.deltaTime;
 		var dayProgress = currentTime % dayLength / dayLength;
+		
 		// Toggle the directional light based on the progress.
 		_sun.enabled = dayProgress > .2f && dayProgress < .8f;
+		
 		// Work out the new angle for the directional light.
 		var targetRotation = new Vector3(dayProgress * 360 + _originalAngle.x,
 			_originalAngle.y,

@@ -8,6 +8,7 @@ namespace Player.Stats {
 		[SerializeField] private float hungerRate;
 		[SerializeField] private float damageRate;
 		[SerializeField, Header("References")] private PlayerHealth playerHealth;
+		[SerializeField] private TimeCycle timeCycle;
 
 		public float GetMaxHunger()
 		{
