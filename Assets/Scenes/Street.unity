@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  dayLength: 40
+  dayLength: 2
 --- !u!1001 &214529653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1108,7 +1108,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -2907,12 +2907,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbeb8ecf6c45b348ba58adbfdc2cbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHunger: 100
-  currentHunger: 100
-  hungerRate: 0.1
-  damageRate: 0.1
+  maxHunger: 150
+  currentHunger: 150
+  hungerRate: 75
+  damageRate: 100
   playerHealth: {fileID: 1212395055}
-  timeCycle: {fileID: 0}
+  timeCycle: {fileID: 170076736}
 --- !u!4 &1212395057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7738383862695397889, guid: c0059c55a8031bd47b3a8fc56998fad0,
