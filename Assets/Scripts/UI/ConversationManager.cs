@@ -1,4 +1,5 @@
-﻿using Conversation;
+﻿using System.Collections.Generic;
+using Conversation;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ namespace UI {
 	public class ConversationManager : MonoBehaviour
 	{
 		[SerializeField] private ConversationObject targetConversation;
-		[SerializeField] private GameObject conversationContainer;
+		[SerializeField] private Transform conversationContainer;
 		[SerializeField] private int elementIndex;
 		private string _textToRead = "";
 		private Text _targetText;
@@ -19,21 +20,50 @@ namespace UI {
 		public void StartConversation(ConversationObject conversation)
 		{
 			targetConversation = conversation;
-			conversationContainer.SetActive(true);
-			elementIndex = 0;
+			conversationContainer.gameObject.SetActive(true);
 		}
 		
-		public void EndConversation()
+		private void EndConversation()
 		{
-			conversationContainer.SetActive(false);
+			conversationContainer.gameObject.SetActive(false);
 			targetConversation = null;
 			elementIndex = 0;
+			
+			// Delete all container elements.
+			var children = new List<GameObject>();
+			foreach (Transform child in conversationContainer) children.Add(child.gameObject);
+			children.ForEach(Destroy);
 		}
 
 		public void ReadOut(string textToRead, Text textContainer)
 		{
 			_textToRead = textToRead;
 			_targetText = textContainer;
+		}
+
+		public void Progress(ConversationObject conversation)
+		{
+			// Reset the conversation if it's different.
+			if (conversation != targetConversation)
+			{
+				EndConversation();
+			} 
+			
+			if (elementIndex == 0)
+			{
+				StartConversation(conversation);
+				conversation.GetElements()[elementIndex].Display(conversationContainer);
+				elementIndex++;
+			}
+			else if (elementIndex == conversation.GetElements().Length)
+			{
+				EndConversation();
+			}
+			else
+			{
+				conversation.GetElements()[elementIndex].Display(conversationContainer);
+				elementIndex++;
+			}
 		}
 		
 		private void Update()
