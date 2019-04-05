@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c36b44f010a7f4ab128c2b5d6d920b, type: 3}
   m_Name: GiveMoney
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 9067707983582240702, guid: 8537b1443a3c17349a0f3b061c89f036, type: 3}
+  speaker: Stranger
   minAmount: 10
   maxAmount: 20
