@@ -5115,6 +5115,7 @@ GameObject:
   - component: {fileID: 2003866067}
   - component: {fileID: 2003866066}
   - component: {fileID: 2003866070}
+  - component: {fileID: 2003866071}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -5217,11 +5218,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1467abb6cb507a04b9927a3e762bb4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalTimeScale: 1
-  inventoryTimeScale: 0.1
-  inventoryObject: {fileID: 528614710}
-  rotateCamera: {fileID: 534669907}
-  inventoryKey: 105
+  _normalTimeScale: 1
+  _inventoryTimeScale: 0.1
+  _inventoryObject: {fileID: 528614710}
+  _rotateCamera: {fileID: 534669907}
+  _inventoryKey: 105
+  _cursorLock: {fileID: 2003866071}
+--- !u!114 &2003866071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003866065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40de6bf71792c1741bccb7f334df4e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2061791053
 GameObject:
   m_ObjectHideFlags: 0
