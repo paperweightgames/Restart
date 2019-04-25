@@ -12,7 +12,7 @@ namespace Conversation {
 		public override GameObject Display(Transform parent)
 		{
 			var amountToGive = Random.Range(minAmount, maxAmount);
-			FindObjectOfType<PlayerBalance>().balance += amountToGive;
+			FindObjectOfType<PlayerBalance>().ChangeBalance(amountToGive);
 			
 			var prefab = base.Display(parent);
 			var textComponent = prefab.GetComponent<Text>();

@@ -6,11 +6,13 @@ using UnityEngine.UI;
 namespace UI {
 	public class ConversationManager : MonoBehaviour
 	{
-		[SerializeField] private ConversationObject targetConversation;
-		[SerializeField] private Transform conversationContainer;
-		[SerializeField] private int elementIndex;
+		[SerializeField] private ConversationObject _targetConversation;
+		[SerializeField] private Transform _conversationContainer;
+		[SerializeField] private int _elementIndex;
+		[SerializeField] private float _readOutSpeed;
 		private string _textToRead = "";
 		private Text _targetText;
+		private float _timeSinceRead;
 
 		private void Start()
 		{
@@ -19,19 +21,19 @@ namespace UI {
 
 		public void StartConversation(ConversationObject conversation)
 		{
-			targetConversation = conversation;
-			conversationContainer.gameObject.SetActive(true);
+			_targetConversation = conversation;
+			_conversationContainer.gameObject.SetActive(true);
 		}
 		
 		private void EndConversation()
 		{
-			conversationContainer.gameObject.SetActive(false);
-			targetConversation = null;
-			elementIndex = 0;
+			_conversationContainer.gameObject.SetActive(false);
+			_targetConversation = null;
+			_elementIndex = 0;
 			
 			// Delete all container elements.
 			var children = new List<GameObject>();
-			foreach (Transform child in conversationContainer) children.Add(child.gameObject);
+			foreach (Transform child in _conversationContainer) children.Add(child.gameObject);
 			children.ForEach(Destroy);
 		}
 
@@ -44,33 +46,37 @@ namespace UI {
 		public void Progress(ConversationObject conversation)
 		{
 			// Reset the conversation if it's different.
-			if (conversation != targetConversation)
+			if (conversation != _targetConversation)
 			{
 				EndConversation();
 			} 
 			
-			if (elementIndex == 0)
+			if (_elementIndex == 0)
 			{
 				StartConversation(conversation);
-				conversation.GetElements()[elementIndex].Display(conversationContainer);
-				elementIndex++;
+				conversation.GetElements()[_elementIndex].Display(_conversationContainer);
+				_elementIndex++;
 			}
-			else if (elementIndex == conversation.GetElements().Length)
+			else if (_elementIndex == conversation.GetElements().Length)
 			{
 				EndConversation();
 			}
 			else
 			{
-				conversation.GetElements()[elementIndex].Display(conversationContainer);
-				elementIndex++;
+				conversation.GetElements()[_elementIndex].Display(_conversationContainer);
+				_elementIndex++;
 			}
 		}
 		
 		private void Update()
 		{
+			_timeSinceRead += Time.deltaTime;
+			_timeSinceRead = Mathf.Clamp(_timeSinceRead, 0, _readOutSpeed);
+			
 			// Read out the text if there is any.
-			if (_textToRead.Length > 0)
+			if (_textToRead.Length > 0 && _timeSinceRead >= _readOutSpeed)
 			{
+				_timeSinceRead = 0;
 				// Append the first character of the text to read out to the text display.
 				_targetText.text += _textToRead[0];
 				// Remove the first character.

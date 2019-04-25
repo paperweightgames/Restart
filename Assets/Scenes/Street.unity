@@ -961,6 +961,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7215619907991351534, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
+        type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215619907991351534, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215619907991351534, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7215619907991351529, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
         type: 3}
       propertyPath: m_Enabled
@@ -1121,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72885e813fbdc2145b92d2ec449740ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBalance: {fileID: 1212395054}
+  _playerBalance: {fileID: 1212395054}
 --- !u!114 &480904746 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
@@ -2849,7 +2864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab91617d0279fab45aeece718b694c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balance: 0
+  _balance: 0
+  _dayProgression: {fileID: 1212395058}
 --- !u!114 &1212395055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2888,6 +2904,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7873961757340742090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1212395058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212395052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23bc734ed88b0a4aa46939ea3c1d641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balanceChange: 0
+  healthChange: 0
+  thirstChange: 0
 --- !u!1001 &1265514597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3790,9 +3821,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cbe67f7b1074c4b87742a155bb40f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetConversation: {fileID: 0}
-  conversationContainer: {fileID: 383203940}
-  elementIndex: 0
+  _targetConversation: {fileID: 0}
+  _conversationContainer: {fileID: 383203940}
+  _elementIndex: 0
+  _readOutSpeed: 0.2
 --- !u!114 &1601843612
 MonoBehaviour:
   m_ObjectHideFlags: 0

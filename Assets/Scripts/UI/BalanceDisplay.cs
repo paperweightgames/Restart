@@ -6,7 +6,7 @@ namespace UI {
 	[RequireComponent(typeof(Text))]
 	public class BalanceDisplay : MonoBehaviour
 	{
-		[SerializeField] private PlayerBalance playerBalance;
+		[SerializeField] private PlayerBalance _playerBalance;
 		private Text _text;
 
 		private void Awake()
@@ -16,7 +16,7 @@ namespace UI {
 
 		private void Update()
 		{
-			_text.text = $"{playerBalance.balance / 100f:c2}";
+			_text.text = $"{_playerBalance.GetBalance() / 100f:c2}";
 		}
 	}
 }
