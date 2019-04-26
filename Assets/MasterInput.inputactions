@@ -8,8 +8,8 @@
                 {
                     "name": "Move",
                     "id": "b6814dc7-e85f-4ccf-a707-0e2daf21976e",
-                    "expectedControlLayout": "",
-                    "continuous": false,
+                    "expectedControlLayout": "Vector2",
+                    "continuous": true,
                     "passThrough": false,
                     "processors": "",
                     "interactions": "",
@@ -34,6 +34,16 @@
                     "processors": "",
                     "interactions": "",
                     "bindings": []
+                },
+                {
+                    "name": "Shoot",
+                    "id": "f4c8a13b-817b-4c40-b040-5c2384096764",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
                 }
             ],
             "bindings": [
@@ -52,7 +62,7 @@
                 {
                     "name": "Up",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";WASD",
                     "action": "Move",
@@ -233,9 +243,21 @@
                     "name": "",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(y=-1)",
                     "groups": ";WASD;Arrow Keys",
                     "action": "Look",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": false,
