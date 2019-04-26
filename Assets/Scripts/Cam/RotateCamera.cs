@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.Input;
 
 namespace Cam
 {
 	public class RotateCamera : MonoBehaviour
 	{
+		[SerializeField] private MasterInput _inputSystem;
 		[SerializeField] private Vector2 rotateSensitivity = new Vector2(2, 2);
 		[SerializeField, Tooltip("X is min rotation, Y is max rotation.")] private Vector2 cameraBounds;
 		private Vector3 _angle;
@@ -12,19 +14,13 @@ namespace Cam
 		{
 			// Set the current to the rotation of the camera at the start of the game.
 			_angle = transform.eulerAngles;
-		}
 
-		private void Update()
-		{
-			// Get the mouse movement input from the player.
-			var h = Input.GetAxis("Mouse X");
-			var v = Input.GetAxis("Mouse Y");
-			// Use the input to rotate the camera.
-			Rotate(new Vector2(v, h));
+			_inputSystem.Player.Look.performed += context => Rotate(context.ReadValue<Vector2>());
 		}
 
 		private void Rotate(Vector2 input)
 		{
+			print(input);
 			// Apply the sensitivity to the input.
 			var inputVector = new Vector3(-input.x * rotateSensitivity.x, input.y * rotateSensitivity.y, 0);
 			// Add the input to the current angle.
