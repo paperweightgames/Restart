@@ -10,16 +10,21 @@ namespace Cam
 		[SerializeField, Tooltip("X is min rotation, Y is max rotation.")] private Vector2 cameraBounds;
 		private Vector3 _angle;
 
+		private void OnEnable()
+		{
+			_inputSystem.Player.Look.Enable();
+			_inputSystem.Player.Look.performed += context => Rotate(context.ReadValue<Vector2>());
+		}
+
 		private void Start()
 		{
 			// Set the current to the rotation of the camera at the start of the game.
 			_angle = transform.eulerAngles;
-
-			_inputSystem.Player.Look.performed += context => Rotate(context.ReadValue<Vector2>());
 		}
 
 		private void Rotate(Vector2 input)
 		{
+			input *= Time.deltaTime;
 			print(input);
 			// Apply the sensitivity to the input.
 			var inputVector = new Vector3(-input.x * rotateSensitivity.x, input.y * rotateSensitivity.y, 0);

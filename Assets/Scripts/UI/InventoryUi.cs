@@ -4,12 +4,18 @@ using UnityEngine;
 namespace UI {
 	public class InventoryUi : MonoBehaviour
 	{
+		[SerializeField] private MasterInput _masterInput;
 		[SerializeField] private float _normalTimeScale;
 		[SerializeField] private float _inventoryTimeScale;
 		[SerializeField] private GameObject _inventoryObject;
 		[SerializeField] private RotateCamera _rotateCamera;
-		[SerializeField] private KeyCode _inventoryKey;
 		[SerializeField] private CursorLock _cursorLock;
+
+		private void OnEnable()
+		{
+			_masterInput.Inventory.Toggle.Enable();
+			_masterInput.Inventory.Toggle.performed += context => ToggleInventory(!_inventoryObject.activeSelf);
+		}
 
 		private void Start()
 		{
@@ -26,14 +32,6 @@ namespace UI {
 			_rotateCamera.enabled = !isOn;
 			// Toggle the lock state of the cursor.
 			_cursorLock.enabled = isOn;
-		}
-
-		private void Update()
-		{
-			if (Input.GetKeyDown(_inventoryKey))
-			{
-				ToggleInventory(!_inventoryObject.activeSelf);
-			}
 		}
 	}
 }
