@@ -50,7 +50,7 @@
                 {
                     "name": "WASD",
                     "path": "2DVector",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Move",

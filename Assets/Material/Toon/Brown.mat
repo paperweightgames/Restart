@@ -26,9 +26,9 @@ Material:
     m_Floats:
     - _Diffuse: 0.1
     - _FadeDiffuse: -3
-    - _FadeShadow: 0
+    - _FadeShadow: 0.97
     - _FadeSpecular: -3
-    - _Outline: 0.25
+    - _Outline: 0.1
     - _Specular: 1
     - _TexAlpha: 0
     m_Colors:

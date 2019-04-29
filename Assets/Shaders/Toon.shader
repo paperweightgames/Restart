@@ -28,7 +28,10 @@
 			{
 				"LightMode" = "ForwardBase"
 				"PassFlags" = "OnlyDirectional"
+				
 			}
+
+            Cull Front
 
 			CGPROGRAM
 			#pragma vertex vert

@@ -1,4 +1,4 @@
-﻿Shader "Custom/Toon"
+﻿Shader "Custom/CustomToon"
 {
 	Properties
 	{
@@ -24,6 +24,7 @@
 	SubShader {
 	Pass {
 		Tags{ "LightMode" = "ForwardBase" }
+		Cull Off
 		// pass for ambient light and first light source
 		
 		CGPROGRAM
