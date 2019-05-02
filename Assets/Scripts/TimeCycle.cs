@@ -3,33 +3,32 @@
 [RequireComponent(typeof(Light))]
 public class TimeCycle : MonoBehaviour
 {
-	[SerializeField] private float currentTime;
-	[SerializeField] private float dayLength;
+	[SerializeField] private Vector3 _originalAngle;
+	[SerializeField] private float _currentTime;
+	[SerializeField] private float _dayLength;
 	private Light _sun;
-	private Vector3 _originalAngle;
 
 	public float GetTime()
 	{
-		return currentTime;
+		return _currentTime;
 	}
 
 	public float GetDayLength()
 	{
-		return dayLength;
+		return _dayLength;
 	}
 
 	private void Awake()
 	{
 		// Gets the reference to the Light component at the start of the game.
 		_sun = GetComponent<Light>();
-		_originalAngle = _sun.transform.eulerAngles;
 	}
 
 	private void Update()
 	{
 		// Increase the current time.
-		currentTime += Time.deltaTime;
-		var dayProgress = currentTime % dayLength / dayLength;
+		_currentTime += Time.deltaTime;
+		var dayProgress = _currentTime % _dayLength / _dayLength;
 		
 		// Toggle the directional light based on the progress.
 		_sun.enabled = dayProgress > .2f && dayProgress < .8f;
