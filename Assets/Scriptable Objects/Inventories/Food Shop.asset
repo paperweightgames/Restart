@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1297a8c0f9e9845a67eaac4614d549, type: 3}
+  m_Name: Food Shop
+  m_EditorClassIdentifier: 
+  _name: 
+  _storedItems:
+  - {fileID: 11400000, guid: 828cea7a7ad2c3845a520d2038238f60, type: 2}
+  - {fileID: 11400000, guid: eca7bdb9b5159804b887436d38271d6d, type: 2}
+  - {fileID: 11400000, guid: 51c3d0ce6c0fd954fbe0698da2fb656d, type: 2}
+  - {fileID: 11400000, guid: da869f1d004d2324f8ab01036a2a55de, type: 2}
