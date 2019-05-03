@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Sandwich
   _description: Budget meal
-  _value: 240
-  _uiSprite: {fileID: 21300000, guid: 908f3e16f8f16c242b2639326c6c574d, type: 3}
+  _value: 100
+  _uiSprite: {fileID: 21300000, guid: 45e48fa8b07761b4bae28ede48b32b29, type: 3}
   _hungerRestore: 100
   _thirstRestore: 0
