@@ -278,6 +278,16 @@
                     "processors": "",
                     "interactions": "",
                     "bindings": []
+                },
+                {
+                    "name": "Close",
+                    "id": "98a5c44a-f798-4859-834c-606f1d897884",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
                 }
             ],
             "bindings": [
@@ -300,6 +310,30 @@
                     "processors": "",
                     "groups": ";Xbox",
                     "action": "Toggle",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";WASD;Arrow Keys",
+                    "action": "Close",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<XboxOneGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Xbox",
+                    "action": "Close",
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": false,

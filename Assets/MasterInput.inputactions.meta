@@ -8,6 +8,7 @@ ScriptedImporter:
     11400006: Player/Action
     11400008: Inventory/Toggle
     11400010: Player/Shoot
+    11400012: Inventory/Close
   externalObjects: {}
   userData: 
   assetBundleName: 

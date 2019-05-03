@@ -27,6 +27,7 @@ public class MasterInput : InputActionAssetReference
         // Inventory
         m_Inventory = asset.GetActionMap("Inventory");
         m_Inventory_Toggle = m_Inventory.GetAction("Toggle");
+        m_Inventory_Close = m_Inventory.GetAction("Close");
         m_Initialized = true;
     }
     private void Uninitialize()
@@ -38,6 +39,7 @@ public class MasterInput : InputActionAssetReference
         m_Player_Shoot = null;
         m_Inventory = null;
         m_Inventory_Toggle = null;
+        m_Inventory_Close = null;
         m_Initialized = false;
     }
     public void SetAsset(InputActionAsset newAsset)
@@ -82,11 +84,13 @@ public class MasterInput : InputActionAssetReference
     // Inventory
     private InputActionMap m_Inventory;
     private InputAction m_Inventory_Toggle;
+    private InputAction m_Inventory_Close;
     public struct InventoryActions
     {
         private MasterInput m_Wrapper;
         public InventoryActions(MasterInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Toggle { get { return m_Wrapper.m_Inventory_Toggle; } }
+        public InputAction @Close { get { return m_Wrapper.m_Inventory_Close; } }
         public InputActionMap Get() { return m_Wrapper.m_Inventory; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
