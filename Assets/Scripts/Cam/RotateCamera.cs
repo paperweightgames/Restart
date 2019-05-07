@@ -16,6 +16,11 @@ namespace Cam
 			_inputSystem.Player.Look.performed += context => Rotate(context.ReadValue<Vector2>());
 		}
 
+		private void OnDestroy()
+		{
+			_inputSystem.Player.Look.Disable();
+		}
+
 		private void Start()
 		{
 			// Set the current to the rotation of the camera at the start of the game.

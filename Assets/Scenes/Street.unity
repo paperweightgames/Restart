@@ -2154,11 +2154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ad1af1156cfbc498e576e7050ad379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 534669905}
-  alignX: 0
-  alignY: 1
-  alignZ: 1
-  speed: 1
+  _targetTransform: {fileID: 534669905}
+  _alignX: 0
+  _alignY: 1
+  _alignZ: 1
+  _speed: 1
 --- !u!114 &913383317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18695,6 +18695,26 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 534669905}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _targetTransform
+      value: 
+      objectReference: {fileID: 534669905}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _alignX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _alignY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _alignZ
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7738383864051903409, guid: c0059c55a8031bd47b3a8fc56998fad0,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
