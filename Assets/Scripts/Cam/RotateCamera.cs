@@ -10,13 +10,13 @@ namespace Cam
 		[SerializeField, Tooltip("X is min rotation, Y is max rotation.")] private Vector2 _cameraBounds;
 		private Vector3 _angle;
 
-		private void OnEnable()
+		private void Awake()
 		{
 			_inputSystem.Player.Look.Enable();
 			_inputSystem.Player.Look.performed += context => Rotate(context.ReadValue<Vector2>());
 		}
 
-		private void OnDisable()
+		private void OnDestroy()
 		{
 			_inputSystem.Player.Look.Disable();
 		}

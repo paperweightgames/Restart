@@ -15,8 +15,14 @@ namespace Player
 		{
 			_masterInput.Player.Move.Enable();
 			_masterInput.Player.Move.performed += context => SetMoveForce(context.ReadValue<Vector2>());
+			_masterInput.Player.Move.cancelled += context => SetMoveForce(context.ReadValue<Vector2>());
 			// Get the reference to the rigid body component that's attached to this GameObject.
 			_rb = GetComponent<Rigidbody>();
+		}
+
+		private void OnDestroy()
+		{
+			_masterInput.Player.Move.Disable();
 		}
 
 		private void FixedUpdate()

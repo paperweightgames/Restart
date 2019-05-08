@@ -12,14 +12,14 @@
                     "continuous": true,
                     "passThrough": false,
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "bindings": []
                 },
                 {
                     "name": "Look",
                     "id": "4b95cf8e-a899-40a5-a720-460c1029785a",
                     "expectedControlLayout": "Vector2",
-                    "continuous": false,
+                    "continuous": true,
                     "passThrough": false,
                     "processors": "",
                     "interactions": "",
@@ -32,17 +32,7 @@
                     "continuous": false,
                     "passThrough": false,
                     "processors": "",
-                    "interactions": "",
-                    "bindings": []
-                },
-                {
-                    "name": "Shoot",
-                    "id": "f4c8a13b-817b-4c40-b040-5c2384096764",
-                    "expectedControlLayout": "",
-                    "continuous": false,
-                    "passThrough": false,
-                    "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "bindings": []
                 }
             ],
@@ -50,7 +40,7 @@
                 {
                     "name": "WASD",
                     "path": "2DVector",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
@@ -62,7 +52,7 @@
                 {
                     "name": "Up",
                     "path": "<Keyboard>/w",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "",
                     "processors": "",
                     "groups": ";WASD",
                     "action": "Move",
@@ -250,18 +240,6 @@
                     "isComposite": false,
                     "isPartOfComposite": false,
                     "modifiers": ""
-                },
-                {
-                    "name": "",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
-                    "chainWithPrevious": false,
-                    "isComposite": false,
-                    "isPartOfComposite": false,
-                    "modifiers": ""
                 }
             ]
         },
@@ -276,7 +254,17 @@
                     "continuous": false,
                     "passThrough": false,
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
+                    "bindings": []
+                },
+                {
+                    "name": "Close",
+                    "id": "98a5c44a-f798-4859-834c-606f1d897884",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "Press",
                     "bindings": []
                 }
             ],
@@ -300,6 +288,30 @@
                     "processors": "",
                     "groups": ";Xbox",
                     "action": "Toggle",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";WASD;Arrow Keys",
+                    "action": "Close",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<XboxOneGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Xbox",
+                    "action": "Close",
                     "chainWithPrevious": false,
                     "isComposite": false,
                     "isPartOfComposite": false,

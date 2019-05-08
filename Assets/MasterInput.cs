@@ -23,10 +23,10 @@ public class MasterInput : InputActionAssetReference
         m_Player_Move = m_Player.GetAction("Move");
         m_Player_Look = m_Player.GetAction("Look");
         m_Player_Action = m_Player.GetAction("Action");
-        m_Player_Shoot = m_Player.GetAction("Shoot");
         // Inventory
         m_Inventory = asset.GetActionMap("Inventory");
         m_Inventory_Toggle = m_Inventory.GetAction("Toggle");
+        m_Inventory_Close = m_Inventory.GetAction("Close");
         m_Initialized = true;
     }
     private void Uninitialize()
@@ -35,9 +35,9 @@ public class MasterInput : InputActionAssetReference
         m_Player_Move = null;
         m_Player_Look = null;
         m_Player_Action = null;
-        m_Player_Shoot = null;
         m_Inventory = null;
         m_Inventory_Toggle = null;
+        m_Inventory_Close = null;
         m_Initialized = false;
     }
     public void SetAsset(InputActionAsset newAsset)
@@ -55,7 +55,6 @@ public class MasterInput : InputActionAssetReference
     private InputAction m_Player_Move;
     private InputAction m_Player_Look;
     private InputAction m_Player_Action;
-    private InputAction m_Player_Shoot;
     public struct PlayerActions
     {
         private MasterInput m_Wrapper;
@@ -63,7 +62,6 @@ public class MasterInput : InputActionAssetReference
         public InputAction @Move { get { return m_Wrapper.m_Player_Move; } }
         public InputAction @Look { get { return m_Wrapper.m_Player_Look; } }
         public InputAction @Action { get { return m_Wrapper.m_Player_Action; } }
-        public InputAction @Shoot { get { return m_Wrapper.m_Player_Shoot; } }
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -82,11 +80,13 @@ public class MasterInput : InputActionAssetReference
     // Inventory
     private InputActionMap m_Inventory;
     private InputAction m_Inventory_Toggle;
+    private InputAction m_Inventory_Close;
     public struct InventoryActions
     {
         private MasterInput m_Wrapper;
         public InventoryActions(MasterInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Toggle { get { return m_Wrapper.m_Inventory_Toggle; } }
+        public InputAction @Close { get { return m_Wrapper.m_Inventory_Close; } }
         public InputActionMap Get() { return m_Wrapper.m_Inventory; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
