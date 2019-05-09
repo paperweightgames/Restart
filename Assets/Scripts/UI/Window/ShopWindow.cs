@@ -2,8 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Stats {
-	public class ShopDisplay : MonoBehaviour
+namespace UI.Window {
+	public class ShopWindow : MonoBehaviour
 	{
 		[SerializeField] private GameObject _shopObject;
 		[SerializeField] private Inventory _shopInventory;

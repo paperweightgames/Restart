@@ -10,15 +10,16 @@ namespace Cam
 		[SerializeField, Tooltip("X is min rotation, Y is max rotation.")] private Vector2 _cameraBounds;
 		private Vector3 _angle;
 
-		private void Awake()
+		private void OnEnable()
 		{
 			_inputSystem.Player.Look.Enable();
-			_inputSystem.Player.Look.performed += context => Rotate(context.ReadValue<Vector2>());
+			_inputSystem.Player.Look.performed += Rotate;
 		}
 
-		private void OnDestroy()
+		private void OnDisable()
 		{
 			_inputSystem.Player.Look.Disable();
+			_inputSystem.Player.Look.performed -= Rotate;
 		}
 
 		private void Start()
@@ -27,8 +28,9 @@ namespace Cam
 			_angle = transform.eulerAngles;
 		}
 
-		private void Rotate(Vector2 input)
+		private void Rotate(InputAction.CallbackContext context)
 		{
+			var input = context.ReadValue<Vector2>();
 			input *= Time.deltaTime;
 			// Apply the sensitivity to the input.
 			var inputVector = new Vector3(input.y * _rotateSensitivity.y, input.x * _rotateSensitivity.x, 0);
