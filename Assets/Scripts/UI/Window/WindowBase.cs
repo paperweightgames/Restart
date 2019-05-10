@@ -9,13 +9,23 @@ namespace UI.Window {
 
 		private void Awake()
 		{
-			EnableClosing();
+			EnableInputs();
 		}
 
-		protected void EnableClosing()
+		private void OnDestroy()
+		{
+			DisableInputs();
+		}
+
+		protected virtual void EnableInputs()
 		{
 			_masterInput.Inventory.Close.Enable();
 			_masterInput.Inventory.Close.performed += context => ToggleWindow(false);
+		}
+
+		protected virtual void DisableInputs()
+		{
+			_masterInput.Inventory.Close.Disable();
 		}
 		
 		public void ToggleWindow(bool isOn)

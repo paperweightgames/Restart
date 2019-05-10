@@ -8,6 +8,7 @@ namespace UI {
 		[SerializeField] private Item _item;
 		[SerializeField] private Image _imageComponent;
 		[SerializeField] private Text _name, _price, _description;
+		[SerializeField] private Button _buyButton;
 
 		public void ChangeItem(Item newItem)
 		{
@@ -15,6 +16,11 @@ namespace UI {
 			UpdateDisplay();
 		}
 
+		public void ToggleBuyButton(bool isOn)
+		{
+			_buyButton.interactable = isOn;
+		}
+		
 		private void UpdateDisplay()
 		{
 			_imageComponent.sprite = _item.GetSprite();

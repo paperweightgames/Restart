@@ -11,7 +11,6 @@ namespace UI.Window {
 
 		public void ToggleMenu(bool isOn)
 		{
-			print(isOn);
 			// Change the speed of the game when in a menu.
 			Time.timeScale = isOn ? _menuTime : _normalTime;
 			// Stop camera movement when in a menu.

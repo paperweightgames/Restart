@@ -39,6 +39,11 @@ namespace UI {
 
 		public void ReadOut(string textToRead, Text textContainer)
 		{
+			// Set the new message if there is no text to read.
+			if (_textToRead != "")
+			{
+				_targetText.text += _textToRead;
+			}
 			_textToRead = textToRead;
 			_targetText = textContainer;
 		}
