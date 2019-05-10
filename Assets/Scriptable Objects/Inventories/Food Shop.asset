@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1297a8c0f9e9845a67eaac4614d549, type: 3}
   m_Name: Food Shop
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Cafe Solei
   _storedItems:
   - {fileID: 11400000, guid: 828cea7a7ad2c3845a520d2038238f60, type: 2}
   - {fileID: 11400000, guid: eca7bdb9b5159804b887436d38271d6d, type: 2}

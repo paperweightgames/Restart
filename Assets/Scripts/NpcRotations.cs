@@ -15,8 +15,6 @@ public class NpcRotations : MonoBehaviour
 	private void Update()
 	{
 		var yDifference = Mathf.Abs(_camera.rotation.y) - Mathf.Abs(_parent.rotation.y);
-		//yDifference = Mathf.Abs(yDifference);
-		print(yDifference);
 		// Back.
 		if (yDifference < .2f)
 		{

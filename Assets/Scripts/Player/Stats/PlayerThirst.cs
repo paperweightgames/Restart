@@ -3,35 +3,35 @@
 namespace Player.Stats {
 	public class PlayerThirst : MonoBehaviour
 	{
-		[SerializeField] private float maxThirst;
-		[SerializeField] private float currentThirst;
-		[SerializeField] private float thirstRate;
-		[SerializeField] private float damageRate;
-		[SerializeField, Header("References")] private PlayerHealth playerHealth;
-		[SerializeField] private TimeCycle timeCycle;
+		[SerializeField] private float _maxThirst = 150;
+		[SerializeField] private float _currentThirst = 150;
+		[SerializeField] private float _thirstRate = 75;
+		[SerializeField] private float _damageRate = 100;
+		[SerializeField, Header("References")] private PlayerHealth _playerHealth;
+		[SerializeField] private TimeCycle _timeCycle;
 
 		public float GetMaxThirst()
 		{
-			return maxThirst;
+			return _maxThirst;
 		}
 
 		public float GetCurrentThirst()
 		{
-			return currentThirst;
+			return _currentThirst;
 		}
 
 		private void Update()
 		{
 			// Scale the amount of hunger to the length of the day.
-			var dayRate = 1 / timeCycle.GetDayLength();
+			var dayRate = 1 / _timeCycle.GetDayLength();
 			// Reduce the hunger.
-			currentThirst -= Time.deltaTime * thirstRate * dayRate;
+			_currentThirst -= Time.deltaTime * _thirstRate * dayRate;
 			// Clamp the hunger.
-			currentThirst = Mathf.Clamp(currentThirst, 0, maxThirst);
+			_currentThirst = Mathf.Clamp(_currentThirst, 0, _maxThirst);
 			// Reduce health if the hunger is depleted (starving).
-			if (currentThirst <= 0)
+			if (_currentThirst <= 0)
 			{
-				playerHealth.ChangeHealth(-Time.deltaTime * damageRate * dayRate);
+				_playerHealth.ChangeHealth(-Time.deltaTime * _damageRate * dayRate);
 			}
 		}
 	}

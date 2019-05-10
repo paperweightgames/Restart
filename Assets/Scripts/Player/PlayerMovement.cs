@@ -36,7 +36,6 @@ namespace Player
 		private void SetMoveForce(Vector2 newForce)
 		{
 			_moveForce = newForce;
-			print(_moveForce);
 		}
 		
 		private void MovePlayer(Vector2 input)
