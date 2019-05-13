@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc0b875c89124e4581c4d5874b97438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceThreshold: 1
+  _distanceThreshold: 2
   _goal: {x: 0, y: 0, z: 0}
   _spawnPoints: []
 --- !u!1001 &2788772839324327785

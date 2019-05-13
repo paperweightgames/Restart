@@ -7,12 +7,17 @@ namespace Stranger {
 	{
 		[SerializeField] private float _distanceThreshold;
 		[SerializeField] private Vector3 _goal;
-		[SerializeField] private Transform[] _spawnPoints;
+		[SerializeField] private StrangerSpawner _strangerSpawner;
 		private NavMeshAgent _navMeshAgent;
 
 		private void Awake()
 		{
 			_navMeshAgent = GetComponent<NavMeshAgent>();
+		}
+
+		private void Start()
+		{
+			SetGoal(StrangerSpawner.GetRandomSpawnPoint(_strangerSpawner.GetSpawnPoints()));
 		}
 
 		public void SetGoal(Vector3 newGoal)
@@ -21,17 +26,20 @@ namespace Stranger {
 			_navMeshAgent.SetDestination(_goal);
 		}
 
-		public void SetSpawnPoints(Transform[] newPoints)
+		public void SetStrangerSpawner(StrangerSpawner newStrangerSpawner)
 		{
-			_spawnPoints = newPoints;
+			_strangerSpawner = newStrangerSpawner;
 		}
 
 		private void Update()
 		{
 			var distanceToGoal = Vector3.Distance(transform.position, _goal);
+			print(distanceToGoal);
 			if (distanceToGoal <= _distanceThreshold)
 			{
-				SetGoal(StrangerSpawner.GetRandomSpawnPoint(_spawnPoints));
+				// De spawn.
+				_strangerSpawner.UnregisterStranger(gameObject);
+				Destroy(gameObject);
 			}
 		}
 	}

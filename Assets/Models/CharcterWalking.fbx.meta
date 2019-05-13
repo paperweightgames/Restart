@@ -205,7 +205,97 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     13700000: pSphere77
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BottomLeftArm
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BottomLegRight
+    second: {fileID: 2100000, guid: 7f6f8fd837a49e7438db91d61f6eeae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BottomRightHand
+    second: {fileID: 2100000, guid: 7f6f8fd837a49e7438db91d61f6eeae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottom_Right_Arm
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Head
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hips
+    second: {fileID: 2100000, guid: 7f6f8fd837a49e7438db91d61f6eeae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftBottomLeg
+    second: {fileID: 2100000, guid: 7f6f8fd837a49e7438db91d61f6eeae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftFoot
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftHand
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LowerBody
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MiddleBody
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neck
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightFoot
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Right_habnd
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopBody
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopLeftArm
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopLegRight
+    second: {fileID: 2100000, guid: 7f6f8fd837a49e7438db91d61f6eeae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopRightArm
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
