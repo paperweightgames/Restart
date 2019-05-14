@@ -1,4 +1,6 @@
-﻿namespace UI.Window {
+﻿using Items;
+
+namespace UI.Window {
 	public class InventoryWindow : WindowBase
 	{
 		private void Awake()
@@ -22,6 +24,11 @@
 		private void OnDestroy()
 		{
 			DisableInputs();
+		}
+
+		public void GenerateInventory(Inventory inventory)
+		{
+			
 		}
 	}
 }

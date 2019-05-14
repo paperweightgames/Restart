@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _distanceThreshold: 2
   _goal: {x: 0, y: 0, z: 0}
-  _spawnPoints: []
+  _strangerSpawner: {fileID: 0}
 --- !u!1001 &2788772839324327785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,11 +169,21 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 441825140336924129, guid: bf4607f8d886b9e4b94e29f08baa3275,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 441825139846296656, guid: bf4607f8d886b9e4b94e29f08baa3275,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 78b3c6b5889a2ce4d85c4b450508098d, type: 2}
+    - target: {fileID: 441825140336924131, guid: bf4607f8d886b9e4b94e29f08baa3275,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5983696594674753190, guid: bf4607f8d886b9e4b94e29f08baa3275,
         type: 3}
       propertyPath: m_LocalPosition.y
