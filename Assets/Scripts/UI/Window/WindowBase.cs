@@ -7,27 +7,21 @@ namespace UI.Window {
 		[SerializeField] protected WindowManager _windowManager;
 		[SerializeField] protected GameObject _menuContainer;
 
-		private void Awake()
+		protected virtual void Start()
 		{
-			EnableInputs();
-		}
-
-		private void OnDestroy()
-		{
-			DisableInputs();
-		}
-
-		protected virtual void EnableInputs()
-		{
-			_masterInput.Inventory.Close.Enable();
 			_masterInput.Inventory.Close.performed += context => ToggleWindow(false);
 		}
 
-		protected virtual void DisableInputs()
+		protected virtual void OnEnable()
+		{
+			_masterInput.Inventory.Close.Enable();
+		}
+
+		protected virtual void OnDisable()
 		{
 			_masterInput.Inventory.Close.Disable();
 		}
-		
+
 		public void ToggleWindow(bool isOn)
 		{
 			_menuContainer.SetActive(isOn);

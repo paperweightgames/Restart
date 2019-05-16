@@ -5,7 +5,6 @@ namespace UI.InventoryDisplay
 {
     public class InventoryDisplay : MonoBehaviour
     {
-        [SerializeField] private GameObject _inventoryPanel;
         [SerializeField] private Transform _rowTransform;
         [SerializeField] private GameObject _slotPrefab;
 
@@ -19,7 +18,9 @@ namespace UI.InventoryDisplay
 
         public virtual void ConfigureSlot(Item item, SlotManager slotManager)
         {
-            slotManager.
+            slotManager.SetName(item.GetName());
+            slotManager.SetDescription(item.GetDescription());
+            slotManager.SetButtonText(item.GetAction());
         }
         
         public void GenerateRows(Inventory targetInventory)

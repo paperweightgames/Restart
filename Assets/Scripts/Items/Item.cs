@@ -5,6 +5,7 @@ namespace Items {
 	{
 		[SerializeField, Header("Item")] protected string _name;
 		[TextArea, SerializeField] protected string _description;
+		[SerializeField] protected string _action;
 		[SerializeField] protected int _value;
 		[SerializeField] protected Sprite _uiSprite;
 
@@ -18,6 +19,10 @@ namespace Items {
 			return _description;
 		}
 
+		public string GetAction()
+		{
+			return _action;
+		}
 		public int GetValue()
 		{
 			return _value;
