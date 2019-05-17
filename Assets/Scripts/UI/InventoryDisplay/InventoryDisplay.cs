@@ -7,6 +7,7 @@ namespace UI.InventoryDisplay
     {
         [SerializeField] private Transform _rowTransform;
         [SerializeField] private GameObject _slotPrefab;
+        [SerializeField] protected Inventory _targetInventory;
 
         public void ClearRow()
         {
@@ -23,7 +24,7 @@ namespace UI.InventoryDisplay
             slotManager.SetButtonText(item.GetAction());
         }
         
-        public void GenerateRows(Inventory targetInventory)
+        public void GenerateSlots(Inventory targetInventory)
         {
             // Clear any previous slots.
             ClearRow();
@@ -31,10 +32,18 @@ namespace UI.InventoryDisplay
             // Generate a slot for each item in the inventory.
             foreach (var item in targetInventory.GetStoredItems())
             {
+                // Skip the item if it is empty.
+                if (item == null) continue;
+                
                 var slot = Instantiate(_slotPrefab, _rowTransform);
                 var slotManager = slot.GetComponent<SlotManager>();
                 ConfigureSlot(item, slotManager);
             }
+        }
+
+        private void OnEnable()
+        {
+            GenerateSlots(_targetInventory);
         }
     }
 }

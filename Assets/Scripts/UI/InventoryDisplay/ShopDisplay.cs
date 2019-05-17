@@ -10,5 +10,10 @@ namespace UI.InventoryDisplay
             // Replace the default action with buy.
             slotManager.SetButtonText("Buy");
         }
+
+        public void SetTargetInventory(Inventory newInventory)
+        {
+            _targetInventory = newInventory;
+        }
     }
 }

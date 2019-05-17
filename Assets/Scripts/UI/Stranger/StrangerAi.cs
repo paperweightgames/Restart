@@ -34,10 +34,9 @@ namespace Stranger {
 		private void Update()
 		{
 			var distanceToGoal = Vector3.Distance(transform.position, _goal);
-			print(distanceToGoal);
 			if (distanceToGoal <= _distanceThreshold)
 			{
-				// De spawn.
+				// Despawn.
 				_strangerSpawner.UnregisterStranger(gameObject);
 				Destroy(gameObject);
 			}
