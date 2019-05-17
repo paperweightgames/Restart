@@ -51,10 +51,10 @@ namespace Cam
 		private void Zoom (float input)
 		{
 			// Changes the zoom offset based on the input.
-			var maxZoom = Mathf.Clamp(_zoomBounds.x, -_maxDistance + 0.1f, _zoomBounds.y);
+			var maxZoom = Mathf.Clamp(_zoomBounds.x, -_maxDistance, _zoomBounds.y);
 
 			_zoomPercentage = Mathf.Clamp01(_zoomPercentage + input * _zoomSpeed);
-			_zoomDistance = Mathf.Lerp(maxZoom, _zoomBounds.y, _zoomPercentage);
+			_zoomDistance = Mathf.Lerp(maxZoom + .1f, _zoomBounds.y, _zoomPercentage);
 		}
 	}
 }
