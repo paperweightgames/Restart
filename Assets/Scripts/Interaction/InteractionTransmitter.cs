@@ -22,5 +22,10 @@ namespace Interaction
 				other.GetComponent<InteractionReceiver>().RemoveInteraction(interaction);
 			}
 		}
+
+		public void SetInteraction(InteractionObject newInteraction)
+		{
+			interaction = newInteraction;
+		}
 	}
 }

@@ -44,7 +44,10 @@ namespace Cam
 
 			if (!ReferenceEquals(hit.collider, null))
 			{
-				_maxDistance = hit.distance;
+				if (!hit.collider.isTrigger)
+				{
+					_maxDistance = hit.distance;
+				}
 			}
 		}
 		

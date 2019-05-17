@@ -316,7 +316,7 @@ PrefabInstance:
     - target: {fileID: 5769178889644116027, guid: 6899fbc9bab860b4bafb5dba2942806b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769178889644116027, guid: 6899fbc9bab860b4bafb5dba2942806b,
         type: 3}
@@ -412,6 +412,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7936370438338550018}
     m_Modifications:
+    - target: {fileID: 449071206747639644, guid: aeb554610ae56bd46bb09fcc061f3981,
+        type: 3}
+      propertyPath: m_Name
+      value: Description
+      objectReference: {fileID: 0}
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
       propertyPath: m_Text
@@ -421,11 +426,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_HorizontalOverflow
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 449071206747639644, guid: aeb554610ae56bd46bb09fcc061f3981,
-        type: 3}
-      propertyPath: m_Name
-      value: Description
       objectReference: {fileID: 0}
     - target: {fileID: 449071206747639645, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
@@ -559,6 +559,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7936370438338550018}
     m_Modifications:
+    - target: {fileID: 449071206747639644, guid: aeb554610ae56bd46bb09fcc061f3981,
+        type: 3}
+      propertyPath: m_Name
+      value: Name
+      objectReference: {fileID: 0}
     - target: {fileID: 449071206747639646, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}
       propertyPath: m_Text
@@ -578,11 +583,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.227451
-      objectReference: {fileID: 0}
-    - target: {fileID: 449071206747639644, guid: aeb554610ae56bd46bb09fcc061f3981,
-        type: 3}
-      propertyPath: m_Name
-      value: Name
       objectReference: {fileID: 0}
     - target: {fileID: 449071206747639645, guid: aeb554610ae56bd46bb09fcc061f3981,
         type: 3}

@@ -23,15 +23,15 @@ namespace Interaction {
 			if (interactions.Count > 0)
 			{
 				interactManager.Show(interactions[0].GetName());
+				
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					interactions[0].Invoke();
+				}
 			}
 			else
 			{
 				interactManager.Hide();
-			}
-			
-			if (Input.GetKeyDown(KeyCode.E))
-			{
-				interactions[0].Invoke();
 			}
 		}
 	}

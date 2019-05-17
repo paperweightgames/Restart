@@ -62,6 +62,11 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.25490198
       objectReference: {fileID: 0}
+    - target: {fileID: 9085828699555000740, guid: 7bf8d2dfd1e7eb240bab203eb4c15205,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5857321184102917653, guid: 7bf8d2dfd1e7eb240bab203eb4c15205,
         type: 3}
       propertyPath: m_Text

@@ -30,6 +30,7 @@ namespace UI {
 			_conversationContainer.gameObject.SetActive(false);
 			_targetConversation = null;
 			_elementIndex = 0;
+			_textToRead = "";
 			
 			// Delete all container elements.
 			var children = new List<GameObject>();

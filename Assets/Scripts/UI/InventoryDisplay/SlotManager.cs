@@ -25,7 +25,10 @@ namespace UI.InventoryDisplay
         {
             _buttonText.text = newAction;
         }
-        
-        
+
+        public void IsButtonEnabled(bool isOn)
+        {
+            _button.interactable = isOn;
+        }
     }
 }

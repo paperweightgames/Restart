@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using Conversation;
+using Interaction;
+using UI;
 using UnityEngine;
 
 namespace Stranger {
 	public class StrangerSpawner : MonoBehaviour
 	{
+		[SerializeField] private InteractionObject[] _interactionObjects;
 		[SerializeField] private GameObject _strangerPrefab;
 		[SerializeField] private Transform[] _spawnPoints;
 		[SerializeField] private float _spawnRate, _spawnSpread;
@@ -26,7 +30,7 @@ namespace Stranger {
 
 		public static Vector3 GetRandomSpawnPoint(Transform[] spawnPoints)
 		{
-			var randomSpawnPointIndex = Random.Range(0, spawnPoints.Length - 1);
+			var randomSpawnPointIndex = Random.Range(0, spawnPoints.Length);
 			var randomSpawnPoint = spawnPoints[randomSpawnPointIndex];
 			return randomSpawnPoint.position;
 		}
@@ -55,6 +59,10 @@ namespace Stranger {
 				var strangerAi = newStranger.GetComponent<StrangerAi>();
 				strangerAi.SetStrangerSpawner(this);
 				_strangers.Add(newStranger);
+				
+				// Assign the conversation.
+				var randomInteractionIndex = Random.Range(0, _interactionObjects.Length);
+				strangerAi.SetInteraction(_interactionObjects[randomInteractionIndex]);
 			}
 		}
 
