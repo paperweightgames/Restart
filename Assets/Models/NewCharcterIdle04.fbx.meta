@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc04a20434f11f349a0c442097bd647d
+guid: d153ac7a38cec62448d388ee1300baf8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pSphere77
+    100000: CharacterMale:man
+    100002: //RootNode
     100004: QuickRigCharacter_Ctrl_ChestEndEffector
     100006: QuickRigCharacter_Ctrl_ChestOriginEffector
     100008: QuickRigCharacter_Ctrl_Head
@@ -69,8 +69,8 @@ ModelImporter:
     100126: QuickRigCharacter_Spine
     100128: QuickRigCharacter_Spine1
     100130: QuickRigCharacter_Spine2
-    400000: //RootNode
-    400002: pSphere77
+    400000: CharacterMale:man
+    400002: //RootNode
     400004: QuickRigCharacter_Ctrl_ChestEndEffector
     400006: QuickRigCharacter_Ctrl_ChestOriginEffector
     400008: QuickRigCharacter_Ctrl_Head
@@ -135,28 +135,17 @@ ModelImporter:
     400126: QuickRigCharacter_Spine
     400128: QuickRigCharacter_Spine1
     400130: QuickRigCharacter_Spine2
-    2100000: Head
-    2100002: TopLeftArm
-    2100004: TopBody
-    2100006: Neck
-    2100008: MiddleBody
-    2100010: TopRightArm
-    2100012: Bottom_Right_Arm
-    2100014: Right_habnd
-    2100016: LowerBody
-    2100018: Hips
-    2100020: BottomRightHand
-    2100022: TopLegRight
-    2100024: BottomLeftArm
-    2100026: LeftHand
-    2100028: LeftBottomLeg
-    2100030: BottomLegRight
-    2100032: RightFoot
-    2100034: LeftFoot
-    4300000: pSphere77
-    7400000: Take 001
+    2100000: CharacterMale_blinn1
+    2100002: Jeans
+    2100004: Shirt
+    2100006: Shoes_
+    2100008: Hands
+    2100010: Head
+    2100012: LegSkin
+    4300000: CharacterMale:man
+    7400000: Player Idle
     9500000: //RootNode
-    13700000: pSphere77
+    13700000: CharacterMale:man
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -186,10 +175,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Player Idle
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

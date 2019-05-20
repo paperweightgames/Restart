@@ -8,12 +8,12 @@ namespace Stranger {
 	public class StrangerSpawner : MonoBehaviour
 	{
 		[SerializeField] private InteractionObject[] _interactionObjects;
-		[SerializeField] private GameObject _strangerPrefab;
-		[SerializeField] private Transform[] _spawnPoints;
+		[SerializeField, Space] private Transform[] _spawnPoints;
 		[SerializeField] private float _spawnRate, _spawnSpread;
 		[SerializeField] private Vector3 _spread;
 		[SerializeField] private int _maxStrangers;
 		[SerializeField] private List<GameObject> _strangers;
+		[SerializeField] private GameObject _strangerPrefab;
 		private float _timeToSpawn;
 		private float _timeSinceSpawn;
 

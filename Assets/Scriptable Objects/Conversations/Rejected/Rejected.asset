@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12f4c84cd6936b84c91f2ff2f92fa5b5, type: 3}
-  m_Name: Test Conversation
+  m_Name: Rejected
   m_EditorClassIdentifier: 
   conversationElements:
-  - {fileID: 11400000, guid: 57dbcf0bc7b981441b50bae29017ef4b, type: 2}
-  - {fileID: 11400000, guid: 9f1cad01edf46f249b42b558c866d93f, type: 2}
-  - {fileID: 11400000, guid: 14a4a9387f170c9479e06314cda5284c, type: 2}
+  - {fileID: 11400000, guid: 542c19532f2ff2444a13f643408e8c67, type: 2}
+  - {fileID: 11400000, guid: cfa6d78083fb9f944a778309f6732d7d, type: 2}

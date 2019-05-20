@@ -5,6 +5,7 @@ namespace Player
 	[RequireComponent(typeof(Rigidbody))]
 	public class PlayerMovement : MonoBehaviour
 	{
+		[SerializeField] private Animator _animator;
 		[SerializeField] private MasterInput _masterInput;
 		[SerializeField] private AlignTransform.AlignTransform _alignTransform;
 		[SerializeField] private float _movementSpeed;
@@ -51,6 +52,9 @@ namespace Player
 			var movementVector = (movementX + movementZ) * _movementSpeed;
 			// Add the new position to the current position.
 			_rb.MovePosition(tf.position + movementVector);
+			
+			// Update Animations.
+			_animator.SetTrigger(input == Vector2.zero ? "Idle" : "Walk");
 		}
 	}
 }

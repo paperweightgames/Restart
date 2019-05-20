@@ -7,6 +7,7 @@ namespace UI.InventoryDisplay
     public class ShopDisplay : InventoryDisplay
     {
         [SerializeField] private PlayerBalance _playerBalance;
+        [SerializeField] private Inventory _playerInventory;
         
         public override void ConfigureSlot(Item item, SlotManager slotManager)
         {
@@ -19,6 +20,7 @@ namespace UI.InventoryDisplay
             {
                 slotManager.IsButtonEnabled(true);
             }
+            slotManager.SetBuyItem(_playerInventory, _playerBalance, item);
         }
 
         public void SetTargetInventory(Inventory newInventory)

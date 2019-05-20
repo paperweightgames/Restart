@@ -25,7 +25,7 @@ namespace UI {
 			_conversationContainer.gameObject.SetActive(true);
 		}
 		
-		private void EndConversation()
+		public void EndConversation()
 		{
 			_conversationContainer.gameObject.SetActive(false);
 			_targetConversation = null;

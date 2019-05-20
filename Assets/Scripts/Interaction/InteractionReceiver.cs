@@ -7,6 +7,7 @@ namespace Interaction {
 	{
 		[SerializeField] private List<InteractionObject> interactions;
 		[SerializeField] private InteractManager interactManager;
+		[SerializeField] private ConversationManager _conversationManager;
 
 		public void AddInteraction(InteractionObject interactionToAdd)
 		{
@@ -32,6 +33,7 @@ namespace Interaction {
 			else
 			{
 				interactManager.Hide();
+				_conversationManager.EndConversation();
 			}
 		}
 	}

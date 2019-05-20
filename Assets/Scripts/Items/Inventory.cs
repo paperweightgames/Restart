@@ -6,7 +6,7 @@ namespace Items {
 	{
 		[SerializeField] private string _name;
 		[SerializeField] private Item[] _storedItems;
-
+		
 		public string GetName()
 		{
 			return _name;
