@@ -37,5 +37,10 @@ namespace UI.InventoryDisplay
             print("BOOP");
             _button.onClick.AddListener(delegate { Shop.Buy(playerInventory, playerBalance, itemToBuy); });
         }
+
+        public void SetSprite(Sprite newSprite)
+        {
+            _imageComponent.sprite = newSprite;
+        }
     }
 }

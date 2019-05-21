@@ -97,8 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466a24f1901be184d9faea8277487d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSensitivity: {x: 2, y: 2}
-  cameraBounds: {x: -9, y: 50}
+  _inputSystem:
+    m_Asset: {fileID: 11400000, guid: 803b6c08dd849dd40890619ca7dce359, type: 3}
+  _rotateSensitivity: {x: 2, y: 2}
+  _cameraBounds: {x: -40, y: 40}
 --- !u!114 &368615523791958002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,11 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c53e1bc5ee58b549b4ac07658438efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 0}
-  offset: {x: 0.46, y: 0.58, z: -1.6}
-  speed: 0.27
-  zoomSpeed: 2
-  zoomBounds: {x: -4, y: 0}
+  _targetTransform: {fileID: 0}
+  _offset: {x: 0.15, y: 1.5, z: -0.5}
+  _speed: 0.31
+  _zoomSpeed: 1
+  _zoomBounds: {x: -3, y: -0.4}
 --- !u!114 &368615523791958004
 MonoBehaviour:
   m_ObjectHideFlags: 0

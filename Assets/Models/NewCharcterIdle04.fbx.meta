@@ -146,7 +146,42 @@ ModelImporter:
     7400000: Player Idle
     9500000: //RootNode
     13700000: CharacterMale:man
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CharacterMale_blinn1
+    second: {fileID: 2100000, guid: 46964098566b1b648af357a0e94d0cb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hands
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Head
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jeans
+    second: {fileID: 2100000, guid: 7cbf54d7dd96cf143840602eb104cdf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LegSkin
+    second: {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoes_
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc0b875c89124e4581c4d5874b97438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionTransmitter: {fileID: 0}
   _distanceThreshold: 2
   _goal: {x: 0, y: 0, z: 0}
   _strangerSpawner: {fileID: 0}
@@ -94,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1956feb47aca80740839a277cbb5883f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 4683825618905052717}
   _playerTag: Player
 --- !u!1001 &2788772839324327785
 PrefabInstance:
@@ -208,6 +208,12 @@ PrefabInstance:
 --- !u!1 &2346968596169722511 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 441825140336924134, guid: bf4607f8d886b9e4b94e29f08baa3275,
+    type: 3}
+  m_PrefabInstance: {fileID: 2788772839324327785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4683825618905052717 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7472593879386728772, guid: bf4607f8d886b9e4b94e29f08baa3275,
     type: 3}
   m_PrefabInstance: {fileID: 2788772839324327785}
   m_PrefabAsset: {fileID: 0}

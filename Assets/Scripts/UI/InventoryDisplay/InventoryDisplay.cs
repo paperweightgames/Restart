@@ -22,6 +22,7 @@ namespace UI.InventoryDisplay
             slotManager.SetName(item.GetName());
             slotManager.SetDescription(item.GetDescription());
             slotManager.SetButtonText(item.GetAction());
+            slotManager.SetSprite(item.GetSprite());
         }
         
         public void GenerateSlots(Inventory targetInventory)

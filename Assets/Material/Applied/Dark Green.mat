@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Dark Green
+  m_Shader: {fileID: 4800000, guid: 9a76da8119f45274191b2a3ecd64ba7b, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Diffuse: 0.1
+    - _FadeDiffuse: 0.93
+    - _FadeShadow: 0.99
+    - _FadeSpecular: 0.98
+    - _Outline: 0.19
+    - _Specular: 0.68
+    - _TexAlpha: 0
+    m_Colors:
+    - _DiffuseColor: {r: 0.3921569, g: 0.4901961, b: 0.20392159, a: 1}
+    - _OutlineColor: {r: 0.121568635, g: 0.054901965, b: 0.10980393, a: 1}
+    - _ShadowColor: {r: 0.09019608, g: 0.2627451, b: 0.29411766, a: 1}
+    - _SpecularColor: {r: 0.9607844, g: 0.9294118, b: 0.7294118, a: 1}
