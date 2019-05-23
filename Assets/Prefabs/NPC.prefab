@@ -63,6 +63,34 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &4397326662574206849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472593879377369732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd488612b6047399ad30b211b982a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shirtMaterials:
+  - {fileID: 2100000, guid: 58cf4acee0bd63046abdf7d3f76158ef, type: 2}
+  - {fileID: 2100000, guid: eb78036b5037726408339b7c9f164e04, type: 2}
+  - {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - {fileID: 2100000, guid: bf4731b5d5a85964582851701638eeb5, type: 2}
+  - {fileID: 2100000, guid: fe8824237432d4b439d688725ef1821f, type: 2}
+  _trouserMaterials:
+  - {fileID: 2100000, guid: 7cbf54d7dd96cf143840602eb104cdf5, type: 2}
+  - {fileID: 2100000, guid: bf4731b5d5a85964582851701638eeb5, type: 2}
+  - {fileID: 2100000, guid: 99807dc4f3a892e4aba52631c404fb9d, type: 2}
+  _skinMaterials:
+  - {fileID: 2100000, guid: 10d5f28ccfc672f49abfe54a1e1832ac, type: 2}
+  - {fileID: 2100000, guid: 7d73e9e9e79e1a242bce828be1dbb7e2, type: 2}
+  _shoeMaterials:
+  - {fileID: 2100000, guid: 99807dc4f3a892e4aba52631c404fb9d, type: 2}
+  - {fileID: 2100000, guid: 20ab1d7d3f6c7a948bd9ad385aecda72, type: 2}
 --- !u!1001 &7472593879377271844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,6 +167,12 @@ PrefabInstance:
 --- !u!4 &7472593879377397414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: d153ac7a38cec62448d388ee1300baf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7472593879377271844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7472593879377369732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d153ac7a38cec62448d388ee1300baf8,
     type: 3}
   m_PrefabInstance: {fileID: 7472593879377271844}
   m_PrefabAsset: {fileID: 0}

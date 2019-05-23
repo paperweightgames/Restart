@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 using UnityEngine.AI;
 
 namespace Stranger {
@@ -19,20 +20,20 @@ namespace Stranger {
 
 		private void OnTriggerEnter(Collider other)
 		{
-			if (other.CompareTag(_playerTag))
-			{
-				_navMeshAgent.isStopped = true;
-				_animator.SetTrigger(Idle);
-			}
+			// Only check the player.
+			if (!other.CompareTag(_playerTag)) return;
+				
+			_navMeshAgent.isStopped = true;
+			_animator.SetTrigger(Idle);
 		}
 
 		private void OnTriggerExit(Collider other)
 		{
-			if (other.CompareTag(_playerTag))
-			{
-				_navMeshAgent.isStopped = false;
-				_animator.SetTrigger(Walk);
-			}
+			// Only check the player.
+			if (!other.CompareTag(_playerTag)) return;
+			
+			_navMeshAgent.isStopped = false;
+			_animator.SetTrigger(Walk);
 		}
 
 		private void OnTriggerStay(Collider other)

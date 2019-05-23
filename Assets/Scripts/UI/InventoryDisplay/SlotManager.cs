@@ -34,7 +34,6 @@ namespace UI.InventoryDisplay
 
         public void SetBuyItem(Inventory playerInventory, PlayerBalance playerBalance, Item itemToBuy)
         {
-            print("BOOP");
             _button.onClick.AddListener(delegate { Shop.Buy(playerInventory, playerBalance, itemToBuy); });
         }
 
