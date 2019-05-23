@@ -109,17 +109,17 @@
 			float shadow = SHADOW_ATTENUATION(input);
 			
 			//Diffuse threshold calculation
-			float diffuseCutoff = saturate( ( max(_Diffuse, nDotL) - _Diffuse ) * shadow* (1-_FadeDiffuse) *60 );
+			float diffuseCutoff = saturate(( max(_Diffuse, nDotL) - _Diffuse) * (shadow - _FadeDiffuse) * 60 );
 			
 			//Specular threshold calculation
-			float specularCutoff = saturate( max(_Specular, dot(reflect(-input.lightDir.xyz, input.normalDir), input.viewDir))-_Specular ) * (1-_FadeSpecular) * 100 * shadow;
+			float specularCutoff = saturate( max(_Specular, dot(reflect(-input.lightDir.xyz, input.normalDir), input.viewDir)) * shadow - _Specular) * (1-_FadeSpecular) * 100;
 			
 			//Calculate Outlines
 			float outlineStrength = saturate( (dot(input.normalDir, input.viewDir ) - _Outline) * (1-_FadeShadow) * 200 );
 			
 			
 			float3 ambientLight = (1-_TexAlpha) *(1-diffuseCutoff) * _ShadowColor.xyz + _TexAlpha * tex2D(_MainTex, input.uv);
-			float3 diffuseReflection = (1-specularCutoff) * _DiffuseColor.xyz * diffuseCutoff;
+			float3 diffuseReflection =  (1-specularCutoff) * _DiffuseColor.xyz * diffuseCutoff;
 			float3 specularReflection = _SpecularColor.xyz * specularCutoff;
 			
 			float3 combinedLight = _OutlineColor * (1-outlineStrength) + (ambientLight + diffuseReflection) * outlineStrength + specularReflection;
