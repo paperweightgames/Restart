@@ -445,6 +445,13 @@ ModelImporter:
     100878: typeMesh3
     100880: typeMesh5
     100882: typeMesh7
+    100884: polySurface411
+    100886: polySurface414
+    100888: polySurface415
+    100890: polySurface416
+    100892: polySurface417
+    100894: polySurface418
+    100896: polySurface419
     400000: //RootNode
     400002: group
     400004: group10
@@ -887,6 +894,13 @@ ModelImporter:
     400878: typeMesh3
     400880: typeMesh5
     400882: typeMesh7
+    400884: polySurface411
+    400886: polySurface414
+    400888: polySurface415
+    400890: polySurface416
+    400892: polySurface417
+    400894: polySurface418
+    400896: polySurface419
     2100000: lambert2
     2100002: CafeSouliea
     2100004: CafeSoulieaGreen
@@ -1235,6 +1249,13 @@ ModelImporter:
     2300498: typeMesh3
     2300500: typeMesh5
     2300502: typeMesh7
+    2300504: polySurface411
+    2300506: polySurface414
+    2300508: polySurface415
+    2300510: polySurface416
+    2300512: polySurface417
+    2300514: polySurface418
+    2300516: polySurface419
     3300000: pasted__pCube106
     3300002: pasted__pCube108
     3300004: pasted__pCube133
@@ -1487,6 +1508,13 @@ ModelImporter:
     3300498: typeMesh3
     3300500: typeMesh5
     3300502: typeMesh7
+    3300504: polySurface411
+    3300506: polySurface414
+    3300508: polySurface415
+    3300510: polySurface416
+    3300512: polySurface417
+    3300514: polySurface418
+    3300516: polySurface419
     4300000: pCube59
     4300002: pasted__pCube6
     4300004: pasted__pCube59
@@ -1739,6 +1767,13 @@ ModelImporter:
     4300498: pCube1563
     4300500: pCube1564
     4300502: pCube1565
+    4300504: polySurface411
+    4300506: polySurface414
+    4300508: polySurface415
+    4300510: polySurface416
+    4300512: polySurface417
+    4300514: polySurface418
+    4300516: polySurface419
     6400000: pasted__pCube106
     6400002: pasted__pCube108
     6400004: pasted__pCube133
@@ -1991,6 +2026,13 @@ ModelImporter:
     6400498: typeMesh3
     6400500: typeMesh5
     6400502: typeMesh7
+    6400504: polySurface411
+    6400506: polySurface414
+    6400508: polySurface415
+    6400510: polySurface416
+    6400512: polySurface417
+    6400514: polySurface418
+    6400516: polySurface419
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
