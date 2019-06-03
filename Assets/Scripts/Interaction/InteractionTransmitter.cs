@@ -5,13 +5,13 @@ namespace Interaction
 {
 	public class InteractionTransmitter : MonoBehaviour
 	{
-		[SerializeField] private InteractionObject interaction;
+		[SerializeField] private InteractionObject _interaction;
 
 		private void OnTriggerEnter(Collider other)
 		{
 			if (other.CompareTag("Player"))
 			{
-				other.GetComponent<InteractionReceiver>().AddInteraction(interaction);
+				other.GetComponent<InteractionReceiver>().AddInteraction(_interaction, gameObject);
 			}
 		}
 
@@ -19,13 +19,13 @@ namespace Interaction
 		{
 			if (other.CompareTag("Player"))
 			{
-				other.GetComponent<InteractionReceiver>().RemoveInteraction(interaction);
+				other.GetComponent<InteractionReceiver>().RemoveInteraction(_interaction);
 			}
 		}
 
 		public void SetInteraction(InteractionObject newInteraction)
 		{
-			interaction = newInteraction;
+			_interaction = newInteraction;
 		}
 	}
 }

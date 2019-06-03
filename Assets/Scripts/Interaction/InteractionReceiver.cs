@@ -5,34 +5,39 @@ using UnityEngine;
 namespace Interaction {
 	public class InteractionReceiver : MonoBehaviour
 	{
-		[SerializeField] private List<InteractionObject> interactions;
-		[SerializeField] private InteractManager interactManager;
+		[SerializeField] private List<InteractionObject> _interactions;
+		[SerializeField] private InteractManager _interactManager;
 		[SerializeField] private ConversationManager _conversationManager;
 
-		public void AddInteraction(InteractionObject interactionToAdd)
+		public List<InteractionObject> GetInteractions()
 		{
-			interactions.Add(interactionToAdd);
+			return _interactions;
+		}
+		public void AddInteraction(InteractionObject interactionToAdd, GameObject sender)
+		{
+			interactionToAdd.SetSender(sender);
+			_interactions.Add(interactionToAdd);
 		}
 
 		public void RemoveInteraction(InteractionObject interactionToRemove)
 		{
-			interactions.Remove(interactionToRemove);
+			_interactions.Remove(interactionToRemove);
 		}
 
 		private void Update()
 		{
-			if (interactions.Count > 0)
+			if (_interactions.Count > 0)
 			{
-				interactManager.Show(interactions[0].GetName());
+				_interactManager.Show(_interactions[0].GetName());
 				
 				if (Input.GetKeyDown(KeyCode.E))
 				{
-					interactions[0].Invoke();
+					_interactions[0].Invoke();
 				}
 			}
 			else
 			{
-				interactManager.Hide();
+				_interactManager.Hide();
 				_conversationManager.EndConversation();
 			}
 		}

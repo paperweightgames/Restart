@@ -18,30 +18,31 @@ namespace Stranger {
 			_navMeshAgent = GetComponent<NavMeshAgent>();
 		}
 
-		private void OnTriggerEnter(Collider other)
-		{
-			// Only check the player.
-			if (!other.CompareTag(_playerTag)) return;
-				
-			_navMeshAgent.isStopped = true;
-			_animator.SetTrigger(Idle);
-		}
-
-		private void OnTriggerExit(Collider other)
+		private void OnTriggerStay(Collider other)
 		{
 			// Only check the player.
 			if (!other.CompareTag(_playerTag)) return;
 			
-			_navMeshAgent.isStopped = false;
-			_animator.SetTrigger(Walk);
+			// Only stop if the player is begging to this stranger.
+			if (other.GetComponent<PlayerInteracting>().IsBegging() != gameObject)
+			{
+				_navMeshAgent.isStopped = false;
+				_animator.SetTrigger(Walk);
+				return;
+			}
+			
+			// Stop if the stranger is the one being begged.
+			_navMeshAgent.isStopped = true;
+			_animator.SetTrigger(Idle);
+			transform.LookAt(other.transform);
 		}
 
-		private void OnTriggerStay(Collider other)
+		private void OnTriggerExit(Collider other)
 		{
-			if (other.CompareTag(_playerTag))
-			{
-				transform.LookAt(other.transform);
-			}
+			if (!other.CompareTag(_playerTag)) return;
+			
+			_navMeshAgent.isStopped = false;
+			_animator.SetTrigger(Walk);
 		}
 	}
 }

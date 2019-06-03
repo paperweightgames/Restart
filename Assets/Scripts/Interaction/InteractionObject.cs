@@ -6,16 +6,27 @@ namespace Interaction {
 	[Serializable]
 	public class InteractionObject
 	{
-		[SerializeField] private string name;
-		[SerializeField] private UnityEvent action;
+		[SerializeField] private string _name;
+		[SerializeField] private GameObject _sender;
+		[SerializeField] private UnityEvent _action;
 
 		public string GetName()
 		{
-			return name;
+			return _name;
 		}
 		public void Invoke()
 		{
-			action.Invoke();
+			_action.Invoke();
+		}
+
+		public void SetSender(GameObject newSender)
+		{
+			_sender = newSender;
+		}
+
+		public GameObject GetSender()
+		{
+			return _sender;
 		}
 	}
 }
