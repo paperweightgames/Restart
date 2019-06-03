@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Rejected 1
   m_EditorClassIdentifier: 
   conversationElements:
-  - {fileID: 11400000, guid: 542c19532f2ff2444a13f643408e8c67, type: 2}
-  - {fileID: 11400000, guid: cfa6d78083fb9f944a778309f6732d7d, type: 2}
+  - {fileID: 11400000, guid: 31f78ef5548bc3b4f9262ee232851064, type: 2}
+  - {fileID: 11400000, guid: 0c9a2dc9018fab1448d6e97afdab772b, type: 2}

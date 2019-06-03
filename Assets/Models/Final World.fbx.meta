@@ -2040,6 +2040,186 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: ACafeOutDoorTable
     second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AZDAAccent
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AllywayBinLid
+    second: {fileID: 2100000, guid: 99807dc4f3a892e4aba52631c404fb9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AllywayBinWheels
+    second: {fileID: 2100000, guid: 99807dc4f3a892e4aba52631c404fb9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Allyway_Bin_Model
+    second: {fileID: 2100000, guid: eb78036b5037726408339b7c9f164e04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AzdaExpressWords
+    second: {fileID: 2100000, guid: eb78036b5037726408339b7c9f164e04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BedHardSurface
+    second: {fileID: 2100000, guid: 20ab1d7d3f6c7a948bd9ad385aecda72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed_Pillow
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed_sheet
+    second: {fileID: 2100000, guid: 58cf4acee0bd63046abdf7d3f76158ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bench_Wooden_parts
+    second: {fileID: 2100000, guid: 20ab1d7d3f6c7a948bd9ad385aecda72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bench_metal_part
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigBuildingGlass
+    second: {fileID: 2100000, guid: 7cbf54d7dd96cf143840602eb104cdf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigBuldingDoorFrame
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeCoffeMachine
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeFrontSideOfBricks
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeIndoorTables
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeKitchenCounter
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeKitchenPayCounter
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeSideBricks
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeSign
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeSouliea
+    second: {fileID: 2100000, guid: 58cf4acee0bd63046abdf7d3f76158ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeSoulieaGreen
+    second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeWindowFrame
+    second: {fileID: 2100000, guid: b95b11efe2f396a4193c58addbcd5594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CafeWords
+    second: {fileID: 2100000, guid: f873260c89cff5f45a69debe482b11e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cafe_Floor
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cfe_brick_seperated
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concert_Bech
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_Flat_1
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_Inside_Falt_1
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoadPaint
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sink
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spikes
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StreetBins
+    second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StreetLight
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Street_Light_Light
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Till
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Umbrella
+    second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

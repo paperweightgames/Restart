@@ -1,4 +1,6 @@
-﻿Shader "Custom/CustomToon"
+﻿// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
+
+Shader "Custom/CustomToon"
 {
 	Properties
 	{
@@ -60,6 +62,10 @@
 		// Uniform float4 _LightColor0;
 		uniform sampler2D _MainTex;
 		uniform float4 _MainTex_ST;
+		
+		// Spotlight.
+		uniform float4x4 unity_WorldToLight;
+		uniform sampler2D _LightTexture0;
 		
 		// Structures.
 		struct vertexInput {
