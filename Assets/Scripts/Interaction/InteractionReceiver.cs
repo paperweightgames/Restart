@@ -21,7 +21,11 @@ namespace Interaction {
 
 		public void RemoveInteraction(InteractionObject interactionToRemove)
 		{
-			_interactions.Remove(interactionToRemove);
+			// Check if the interaction is inside before removing it.
+			if (_interactions.Contains(interactionToRemove))
+			{
+				_interactions.Remove(interactionToRemove);
+			}
 		}
 
 		private void Update()

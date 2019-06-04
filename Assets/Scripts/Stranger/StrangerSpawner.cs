@@ -14,6 +14,7 @@ namespace Stranger {
 		[SerializeField] private int _maxStrangers;
 		[SerializeField] private List<GameObject> _strangers;
 		[SerializeField] private GameObject _strangerPrefab;
+		[SerializeField] private GameObject _player;
 		private float _timeToSpawn;
 		private float _timeSinceSpawn;
 
@@ -57,6 +58,8 @@ namespace Stranger {
 				var newStranger = Instantiate(_strangerPrefab, spawnPosition, Quaternion.identity,
 					transform);
 				var strangerAi = newStranger.GetComponent<StrangerAi>();
+				strangerAi.SetPlayer(_player);
+				
 				strangerAi.SetStrangerSpawner(this);
 				_strangers.Add(newStranger);
 				

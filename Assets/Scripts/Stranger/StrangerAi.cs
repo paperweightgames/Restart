@@ -11,6 +11,11 @@ namespace Stranger {
 		[SerializeField] private StrangerSpawner _strangerSpawner;
 		private InteractionTransmitter _interactionTransmitter;
 		private NavMeshAgent _navMeshAgent;
+
+		public void SetPlayer(GameObject newPlayer)
+		{
+			_interactionTransmitter.SetPlayer(newPlayer);
+		}
 		
 		private void Awake()
 		{

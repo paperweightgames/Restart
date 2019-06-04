@@ -25,25 +25,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b3b947a9a27e74ebad05b357c1f2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction:
-    name: Beg
-    action:
+  _interaction:
+    _name: 
+    _sender: {fileID: 0}
+    _action:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Progress
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 2f3c0225bd8f73c479cde7010b48c14d,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: Conversation.ConversationObject, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+  _player: {fileID: 7738383862695397895, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
 --- !u!195 &912317213
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -53,7 +43,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2346968596169722511}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 5
   avoidancePriority: 50
