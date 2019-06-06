@@ -20,6 +20,8 @@ namespace Interaction
 
 		private void OnTriggerEnter(Collider other)
 		{
+			if (other.isTrigger) return;
+			
 			if (other.gameObject == _player && _playerInteracting.IsBegging() == null)
 			{
 				_interactionReceiver.AddInteraction(_interaction, gameObject);
@@ -28,6 +30,8 @@ namespace Interaction
 
 		private void OnTriggerExit(Collider other)
 		{
+			if (other.isTrigger) return;
+			
 			if (other.gameObject == _player && _playerInteracting.IsBegging() == gameObject)
 			{
 				_interactionReceiver.RemoveInteraction(_interaction);

@@ -12,7 +12,17 @@ ModelImporter:
     3300000: //RootNode
     4300000: pCube1423
     6400000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: b95b11efe2f396a4193c58addbcd5594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalFrameForSuperMarket
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

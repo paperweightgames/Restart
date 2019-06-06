@@ -302,10 +302,10 @@ MonoBehaviour:
   - {fileID: 26850478}
   - {fileID: 1300869409}
   - {fileID: 1159196815}
-  _spawnRate: 0.01
+  _spawnRate: 0
   _spawnSpread: 0.5
   _spread: {x: 2, y: 0.1, z: 2}
-  _maxStrangers: 100
+  _maxStrangers: 50
   _strangers: []
   _strangerPrefab: {fileID: 2346968596169722511, guid: 5ce03579df456354083937ec548ae959,
     type: 3}
@@ -1227,11 +1227,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7215619907991351529, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7215619907991351534, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
         type: 3}
       propertyPath: m_ChildForceExpandWidth
@@ -1246,6 +1241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Spacing
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215619907991351529, guid: 5ba6b3b7d145aa747b5bd1156b56ced7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba6b3b7d145aa747b5bd1156b56ced7, type: 3}
@@ -4546,6 +4546,7 @@ MonoBehaviour:
   _conversationContainer: {fileID: 383203940}
   _elementIndex: 0
   _readOutSpeed: 0.02
+  _interactionReceiver: {fileID: 1212395053}
 --- !u!114 &1601843612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10446,6 +10447,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: targetTransform
+      value: 
+      objectReference: {fileID: 534669905}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _targetTransform
+      value: 
+      objectReference: {fileID: 534669905}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _alignX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _alignY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+      propertyPath: _alignZ
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7738383862695397888, guid: c0059c55a8031bd47b3a8fc56998fad0,
         type: 3}
       propertyPath: m_IsTrigger
@@ -10478,30 +10503,6 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1767598155}
-    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
-      propertyPath: targetTransform
-      value: 
-      objectReference: {fileID: 534669905}
-    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
-      propertyPath: _targetTransform
-      value: 
-      objectReference: {fileID: 534669905}
-    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
-      propertyPath: _alignX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
-      propertyPath: _alignY
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
-      propertyPath: _speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1212395054, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
-      propertyPath: _alignZ
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 789838622749018213, guid: c0059c55a8031bd47b3a8fc56998fad0,
         type: 3}
       propertyPath: m_Materials.Array.data[1]

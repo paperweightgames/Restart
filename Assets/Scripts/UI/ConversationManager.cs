@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Conversation;
+using Interaction;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace UI {
 		[SerializeField] private Transform _conversationContainer;
 		[SerializeField] private int _elementIndex;
 		[SerializeField] private float _readOutSpeed;
+		[SerializeField] private InteractionReceiver _interactionReceiver;
 		private string _textToRead = "";
 		private Text _targetText;
 		private float _timeSinceRead;
@@ -27,6 +29,14 @@ namespace UI {
 		
 		public void EndConversation()
 		{
+			/*
+			// Remove the conversation from the stranger.
+			if (_interactionReceiver.GetInteractions().Count > 0)
+			{
+				_interactionReceiver.RemoveInteraction(_interactionReceiver.GetInteractions()[0]);
+			}
+			*/
+			
 			_conversationContainer.gameObject.SetActive(false);
 			_targetConversation = null;
 			_elementIndex = 0;
@@ -56,17 +66,19 @@ namespace UI {
 			{
 				EndConversation();
 			} 
-			
+			// Start a new conversation.
 			if (_elementIndex == 0)
 			{
 				StartConversation(conversation);
 				conversation.GetElements()[_elementIndex].Display(_conversationContainer);
 				_elementIndex++;
 			}
+			// End the conversation.
 			else if (_elementIndex == conversation.GetElements().Length)
 			{
 				EndConversation();
 			}
+			// Progress otherwise.
 			else
 			{
 				conversation.GetElements()[_elementIndex].Display(_conversationContainer);

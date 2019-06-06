@@ -10,7 +10,7 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == _player)
+        if (other.gameObject == _player && !other.isTrigger)
         {
             _animator.SetTrigger(Open);
         }
@@ -18,7 +18,7 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == _player)
+        if (other.gameObject == _player && !other.isTrigger)
         {
             _animator.SetTrigger(Close);
         }

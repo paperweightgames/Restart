@@ -2183,6 +2183,56 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Falt
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FaltSeperationBeams
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlatBricks
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlatDoorHandle
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlatStairs
+    second: {fileID: 2100000, guid: 1ff3af941870be8409756bda07612618, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontWindowFrameHS
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: b95b11efe2f396a4193c58addbcd5594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GrassArea
+    second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GrassArea1
+    second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MattressOnStreet
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Pavement
     second: {fileID: 2100000, guid: 70ac29e249a01ae47b675d9048e6470d, type: 2}
   - first:
@@ -2219,6 +2269,51 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Street_Light_Light
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketBottomHalfOfChair
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketCan
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketCeralBox
+    second: {fileID: 2100000, guid: 3a16b7265057aef4081723013d00256c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketCounterDesk
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketDoorFrames
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketShelves
+    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketSweetBox
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarketTopPartOfChair
+    second: {fileID: 2100000, guid: 867e5ab3267fc034ca87865acd1152a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SuperMarket_Floor
     second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
   - first:
       type: UnityEngine:Material
