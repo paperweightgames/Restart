@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Interaction
@@ -8,20 +9,18 @@ namespace Interaction
 		[SerializeField] private InteractionObject _interaction;
 		[SerializeField] private GameObject _player;
 		private InteractionReceiver _interactionReceiver;
+		private PlayerInteracting _playerInteracting;
 
 		public void SetPlayer(GameObject newPlayer)
 		{
 			_player = newPlayer;
-		}
-		
-		private void Awake()
-		{
 			_interactionReceiver = _player.GetComponent<InteractionReceiver>();
+			_playerInteracting = _player.GetComponent<PlayerInteracting>();
 		}
 
 		private void OnTriggerEnter(Collider other)
 		{
-			if (other.gameObject == _player)
+			if (other.gameObject == _player && _playerInteracting.IsBegging() == null)
 			{
 				_interactionReceiver.AddInteraction(_interaction, gameObject);
 			}
@@ -29,7 +28,7 @@ namespace Interaction
 
 		private void OnTriggerExit(Collider other)
 		{
-			if (other.gameObject == _player)
+			if (other.gameObject == _player && _playerInteracting.IsBegging() == gameObject)
 			{
 				_interactionReceiver.RemoveInteraction(_interaction);
 			}

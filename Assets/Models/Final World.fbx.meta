@@ -2183,6 +2183,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Pavement
+    second: {fileID: 2100000, guid: 70ac29e249a01ae47b675d9048e6470d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road1
+    second: {fileID: 2100000, guid: ca5ebac7ded5f834e9f4270af572b98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: RoadPaint
     second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
   - first:
@@ -2220,6 +2230,31 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Umbrella
     second: {fileID: 2100000, guid: 1ef2f50524d9e2a468649e4a7e4471be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallOnTheSides
+    second: {fileID: 2100000, guid: 20ab1d7d3f6c7a948bd9ad385aecda72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallOnTheSidesBricks
+    second: {fileID: 2100000, guid: 6ab55432ed84af1468a0b4859c6c3c8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowFrame
+    second: {fileID: 2100000, guid: 20ab1d7d3f6c7a948bd9ad385aecda72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowsGlass
+    second: {fileID: 2100000, guid: 7cbf54d7dd96cf143840602eb104cdf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ZebraCrossing
+    second: {fileID: 2100000, guid: c8a99eb757ad25b439894c7f21ddbffd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
