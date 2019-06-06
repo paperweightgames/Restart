@@ -45,7 +45,7 @@ namespace Stranger {
 		private void SetMoving(bool isMoving)
 		{
 			_navMeshAgent.isStopped = !isMoving;
-			_animator.SetTrigger(isMoving ? Walk : Idle);
+			_animator.SetTrigger(_navMeshAgent.isStopped ? Idle : Walk);
 		}
 	}
 }

@@ -2184,7 +2184,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Falt
-    second: {fileID: 2100000, guid: 0fecc2131f3200e429969bda9b8ebac0, type: 2}
+    second: {fileID: 2100000, guid: 20ab1d7d3f6c7a948bd9ad385aecda72, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
