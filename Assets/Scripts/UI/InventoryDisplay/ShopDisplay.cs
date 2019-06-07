@@ -13,6 +13,9 @@ namespace UI.InventoryDisplay
         {
             base.ConfigureSlot(item, slotManager);
             // Replace the default action with buy.
+            
+            slotManager.ResetButtonAction();
+            
             slotManager.SetButtonText("Buy");
             slotManager.SetName($"{item.GetName()} - {item.GetValue()/100f:c2}");
 
@@ -25,11 +28,6 @@ namespace UI.InventoryDisplay
         public void SetTargetInventory(Inventory newInventory)
         {
             _targetInventory = newInventory;
-        }
-
-        public void Regenerate()
-        {
-            GenerateSlots(_targetInventory);
         }
     }
 }

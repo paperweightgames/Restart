@@ -15,12 +15,14 @@ MonoBehaviour:
   _interaction:
     _name: 
     _sender: {fileID: 0}
+    _hasEnded: 0
     _action:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   _player: {fileID: 7738383862695397895, guid: c0059c55a8031bd47b3a8fc56998fad0, type: 3}
+  _isStranger: 1
 --- !u!195 &912317213
 NavMeshAgent:
   m_ObjectHideFlags: 0

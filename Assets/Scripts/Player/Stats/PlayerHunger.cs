@@ -8,6 +8,7 @@ namespace Player.Stats {
 		[SerializeField] private float hungerRate;
 		[SerializeField] private float damageRate;
 		[SerializeField, Header("References")] private PlayerHealth playerHealth;
+		[SerializeField, Range(0, 1)] private float _damageThreshold = .5f;
 		[SerializeField] private TimeCycle timeCycle;
 
 		public float GetMaxHunger()
@@ -33,7 +34,7 @@ namespace Player.Stats {
 			ChangeCurrentHunger(-Time.deltaTime * hungerRate * dayRate);
 			
 			// Reduce health if the hunger is depleted (starving).
-			if (currentHunger <= maxHunger * .1f)
+			if (currentHunger <= maxHunger * _damageThreshold)
 			{
 				playerHealth.ChangeHealth(-Time.deltaTime * damageRate * dayRate);
 			}

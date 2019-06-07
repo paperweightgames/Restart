@@ -35,12 +35,21 @@ namespace UI.InventoryDisplay
         public void SetBuyItem(Inventory playerInventory, PlayerBalance playerBalance, Item itemToBuy, ShopDisplay shopDisplay)
         {
             _button.onClick.AddListener(delegate { Shop.Buy(playerInventory, playerBalance, itemToBuy, shopDisplay); });
-            
+        }
+
+        public void SetEatItem(Food itemToEat, PlayerEating playerEating)
+        {
+            _button.onClick.AddListener(delegate { playerEating.Eat(itemToEat); });
         }
 
         public void SetSprite(Sprite newSprite)
         {
             _imageComponent.sprite = newSprite;
+        }
+
+        public void ResetButtonAction()
+        {
+            _button.onClick.RemoveAllListeners();
         }
     }
 }

@@ -1,10 +1,12 @@
 using Items;
+using Player;
 using UnityEngine;
 
 namespace UI.InventoryDisplay
 {
     public class InventoryDisplay : MonoBehaviour
     {
+        [SerializeField] private PlayerEating _playerEating;
         [SerializeField] private Transform _rowTransform;
         [SerializeField] private GameObject _slotPrefab;
         [SerializeField] protected Inventory _targetInventory;
@@ -24,6 +26,11 @@ namespace UI.InventoryDisplay
             slotManager.SetButtonText(item.GetAction());
             slotManager.SetSprite(item.GetSprite());
             slotManager.IsButtonEnabled(true);
+
+            if (item.GetType() == typeof(Food))
+            {
+                slotManager.SetEatItem((Food)item, _playerEating);
+            }
         }
         
         public void GenerateSlots(Inventory targetInventory)
@@ -44,6 +51,11 @@ namespace UI.InventoryDisplay
         }
 
         private void OnEnable()
+        {
+            Regenerate();
+        }
+        
+        public void Regenerate()
         {
             GenerateSlots(_targetInventory);
         }

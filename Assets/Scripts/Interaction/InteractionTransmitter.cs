@@ -8,6 +8,7 @@ namespace Interaction
 	{
 		[SerializeField] private InteractionObject _interaction;
 		[SerializeField] private GameObject _player;
+		[SerializeField] private bool _isStranger = true;
 		private InteractionReceiver _interactionReceiver;
 		private PlayerInteracting _playerInteracting;
 
@@ -30,8 +31,11 @@ namespace Interaction
 		{
 			if (other.isTrigger) return;
 			
-			if (other.gameObject == _player && _playerInteracting.IsBegging() == null)
+			if (other.gameObject != _player) return;
+			
+			if (_playerInteracting.IsBegging() == null || !_isStranger)
 			{
+				
 				_interactionReceiver.AddInteraction(_interaction, gameObject);
 			}
 		}
@@ -40,7 +44,9 @@ namespace Interaction
 		{
 			if (other.isTrigger) return;
 			
-			if (other.gameObject == _player && _playerInteracting.IsBegging() == gameObject)
+			if (other.gameObject != _player) return;
+			
+			if (_playerInteracting.IsBegging() == gameObject || !_isStranger)
 			{
 				_interactionReceiver.RemoveInteraction(_interaction);
 			}
