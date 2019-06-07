@@ -32,9 +32,10 @@ namespace UI.InventoryDisplay
             _button.interactable = isOn;
         }
 
-        public void SetBuyItem(Inventory playerInventory, PlayerBalance playerBalance, Item itemToBuy)
+        public void SetBuyItem(Inventory playerInventory, PlayerBalance playerBalance, Item itemToBuy, ShopDisplay shopDisplay)
         {
-            _button.onClick.AddListener(delegate { Shop.Buy(playerInventory, playerBalance, itemToBuy); });
+            _button.onClick.AddListener(delegate { Shop.Buy(playerInventory, playerBalance, itemToBuy, shopDisplay); });
+            
         }
 
         public void SetSprite(Sprite newSprite)

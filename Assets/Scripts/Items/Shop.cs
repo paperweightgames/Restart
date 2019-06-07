@@ -1,10 +1,11 @@
 ﻿using Player;
+using UI.InventoryDisplay;
 using UnityEngine;
 
 namespace Items {
 	public class Shop : MonoBehaviour
 	{
-		public static void Buy(Inventory playerInventory, PlayerBalance playerBalance, Item itemToBuy)
+		public static void Buy(Inventory playerInventory, PlayerBalance playerBalance, Item itemToBuy, ShopDisplay shopDisplay)
 		{
 			// Check if the player can afford the item.
 			var itemValue = itemToBuy.GetValue();
@@ -17,6 +18,9 @@ namespace Items {
 			playerInventory.AddItem(itemToBuy);
 			// Remove the price of the item from the 
 			playerBalance.ChangeBalance(-itemValue);
+			
+			// Regenerate the ui.
+			shopDisplay.Regenerate();
 		}
 	}
 }

@@ -37,6 +37,18 @@ namespace UI {
 			}
 			*/
 			
+			ResetConversation();
+			
+			if (_interactionReceiver.GetInteractions().Count > 0)
+			{
+				_interactionReceiver.RemoveInteraction(_interactionReceiver.GetInteractions()[0]);
+			}
+			
+			//_interactionReceiver.GetInteractions()[0].SetEnded(true);
+		}
+
+		public void ResetConversation()
+		{
 			_conversationContainer.gameObject.SetActive(false);
 			_targetConversation = null;
 			_elementIndex = 0;
@@ -64,7 +76,7 @@ namespace UI {
 			// Reset the conversation if it's different.
 			if (conversation != _targetConversation)
 			{
-				EndConversation();
+				ResetConversation();
 			} 
 			// Start a new conversation.
 			if (_elementIndex == 0)

@@ -8,8 +8,18 @@ namespace Interaction {
 	{
 		[SerializeField] private string _name;
 		[SerializeField] private GameObject _sender;
+		[SerializeField] private bool _hasEnded = false;
 		[SerializeField] private UnityEvent _action;
 
+		public void SetEnded(bool hasEnded)
+		{
+			_hasEnded = hasEnded;
+		}
+
+		public bool HasEnded()
+		{
+			return _hasEnded;
+		}
 		public string GetName()
 		{
 			return _name;

@@ -14,7 +14,7 @@ namespace Player
 
             foreach (var interaction in interactions)
             {
-                if (interaction.GetName() == "Beg")
+                if (interaction.GetName() == "Beg" && !interaction.HasEnded())
                 {
                     return interaction.GetSender();
                 }

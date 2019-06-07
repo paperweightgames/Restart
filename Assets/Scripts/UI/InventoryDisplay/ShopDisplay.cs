@@ -16,16 +16,23 @@ namespace UI.InventoryDisplay
             slotManager.SetButtonText("Buy");
             slotManager.SetName($"{item.GetName()} - {item.GetValue()/100f:c2}");
 
-            if (_playerBalance.GetBalance() > item.GetValue())
+            if (_playerBalance.GetBalance() >= item.GetValue())
             {
                 slotManager.IsButtonEnabled(true);
             }
-            slotManager.SetBuyItem(_playerInventory, _playerBalance, item);
+            slotManager.SetBuyItem(_playerInventory, _playerBalance, item, this);
         }
+        
+        
 
         public void SetTargetInventory(Inventory newInventory)
         {
             _targetInventory = newInventory;
+        }
+
+        public void Regenerate()
+        {
+            GenerateSlots(_targetInventory);
         }
     }
 }

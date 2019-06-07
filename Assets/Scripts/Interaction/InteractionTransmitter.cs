@@ -11,6 +11,14 @@ namespace Interaction
 		private InteractionReceiver _interactionReceiver;
 		private PlayerInteracting _playerInteracting;
 
+		private void Awake()
+		{
+			if (_player != null)
+			{
+				SetPlayer(_player);
+			}
+		}
+
 		public void SetPlayer(GameObject newPlayer)
 		{
 			_player = newPlayer;

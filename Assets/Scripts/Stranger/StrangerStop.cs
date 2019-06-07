@@ -17,6 +17,11 @@ namespace Stranger {
 		{
 			_navMeshAgent = GetComponent<NavMeshAgent>();
 		}
+		
+		private void Start()
+		{
+			SetMoving(true);
+		}
 
 		private void OnTriggerStay(Collider other)
 		{
