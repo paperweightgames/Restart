@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cake
   _description: Will make you fat!
+  _action: Eat
   _value: 300
   _uiSprite: {fileID: 21300000, guid: a8de17e61fbcdec41bb3e4b993f8e834, type: 3}
   _hungerRestore: 50

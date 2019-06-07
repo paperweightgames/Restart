@@ -20,16 +20,20 @@ namespace Player.Stats {
 			return currentHunger;
 		}
 
+		public void ChangeCurrentHunger(float amountToChange)
+		{
+			currentHunger += amountToChange;
+			currentHunger = Mathf.Clamp(currentHunger, 0, maxHunger);
+		}
 		private void Update()
 		{
 			// Scale the amount of hunger to the length of the day.
 			var dayRate = 1 / timeCycle.GetDayLength();
 			// Reduce the hunger.
-			currentHunger -= Time.deltaTime * hungerRate * dayRate;
-			// Clamp the hunger.
-			currentHunger = Mathf.Clamp(currentHunger, 0, maxHunger);
+			ChangeCurrentHunger(-Time.deltaTime * hungerRate * dayRate);
+			
 			// Reduce health if the hunger is depleted (starving).
-			if (currentHunger <= 0)
+			if (currentHunger <= maxHunger * .1f)
 			{
 				playerHealth.ChangeHealth(-Time.deltaTime * damageRate * dayRate);
 			}
